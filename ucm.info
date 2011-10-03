@@ -1,0 +1,28 @@
+name = UC Merced
+description = UC Merced Version of Drupal
+version = VERSION
+core = 7.x
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = dblog
+dependencies[] = overlay
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+
+; Contrib Dependencies
+dependencies[] = features
+dependencies[] = ctools
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = quickbar
+files[] = ucm.profile
+
