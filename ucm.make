@@ -4,7 +4,6 @@ api = 2
 ; Dependencies =================================================================
 
 projects[ctools] = 1.0-rc1
-projects[views] = 3.0-rc1
 projects[features] = 1.0-beta4
 projects[quickbar] = 2.x-dev
 projects[pathauto] = 1.0-rc2
@@ -14,14 +13,9 @@ projects[panels] = 3.0-alpha3
 projects[webform] = 3.13
 projects[select_or_other] = 2.5
 projects[options_element] = 1.4
-projects[calendar] = 3.x-dev
-projects[date] = 2.x-dev
-projects[image_resize_filter] = 1.13
-projects[insert] = 1.1
 projects[menu_block] = 2.2
 projects[menu_breadcrumb] = 1.3
 projects[custom_breadcrumbs] = 2.x-dev
-projects[link] = 1.0-beta1
 projects[redirect] = 1.0-beta3
 projects[cas] = 1.0
 projects[cas_attributes] = 1.0-beta2
