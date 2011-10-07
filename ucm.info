@@ -22,6 +22,7 @@ dependencies[] = rdf
 dependencies[] = features
 dependencies[] = ctools
 dependencies[] = quickbar
+dependencies[] = quickbar_extras
 dependencies[] = pathauto
 dependencies[] = devel
 dependencies[] = strongarm
