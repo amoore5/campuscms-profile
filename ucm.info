@@ -21,8 +21,23 @@ dependencies[] = rdf
 ; Contrib Dependencies
 dependencies[] = features
 dependencies[] = ctools
-dependencies[] = views
-dependencies[] = views_ui
 dependencies[] = quickbar
+dependencies[] = pathauto
+dependencies[] = devel
+dependencies[] = strongarm
+dependencies[] = panels
+dependencies[] = menu_block
+dependencies[] = menu_breadcrumb
+dependencies[] = custom_breadcrumbs
+dependencies[] = redirect
+dependencies[] = cas
+dependencies[] = cas_attributes
+dependencies[] = realname
+dependencies[] = token
+dependencies[] = google_fonts
+dependencies[] = role_delegation
+dependencies[] = smtp
+dependencies[] = transliteration
+dependencies[] = wysiwyg
 files[] = ucm.profile
 
