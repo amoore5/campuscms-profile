@@ -185,7 +185,7 @@ function ucm_install() {
   
   // Create a site manager role
   $site_manager = new stdClass();
-  $site_manager->name = 'content editor';
+  $site_manager->name = 'site manager';
   user_role_save($site_manager);
 
   // Enable the admin theme.
