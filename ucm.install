@@ -177,6 +177,16 @@ function ucm_install() {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
+    
+  // Create a content editor role
+  $content_editor = new stdClass();
+  $content_editor->name = 'content editor';
+  user_role_save($content_editor);
+  
+  // Create a site manager role
+  $site_manager = new stdClass();
+  $site_manager->name = 'content editor';
+  user_role_save($site_manager);
 
   // Enable the admin theme.
   db_update('system')
