@@ -27,3 +27,4 @@ projects[role_delegation] = 1.1
 projects[smtp] = 1.0-beta1
 projects[transliteration] = 3.x-dev
 projects[wysiwyg] = 2.1
+projects[menu_admin_per_menu] = 1.0
