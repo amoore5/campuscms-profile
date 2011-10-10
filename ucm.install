@@ -215,7 +215,7 @@ function _ucm_setup_roles($filter_perms) {
   
   $content_editor_permissions = array(
     $filter_perms['filtered_html'],
-    'view content revisions',
+    //'view content revisions',
     'view own unpublished content',
     'access the administrative overlay',
     'create and edit URL aliases',
@@ -235,7 +235,7 @@ function _ucm_setup_roles($filter_perms) {
     'use contextual links',
     'administer menus and menu items',
     'view own unpublished content',
-    'view content revisions',
+    //'view content revisions',
     'revert content revisions',
     'delete content revisions',
     'create and edit url aliases',
