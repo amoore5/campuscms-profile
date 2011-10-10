@@ -6,50 +6,21 @@
  * Perform actions to set up the site for this profile.
  */
 function ucm_install() {
-  $filter_perms = _ucm_setup_filter_formats();
-  _ucm_setup_blocks();
-
-
-  // Enable user picture support and set the default to a square thumbnail option.
-  variable_set('user_pictures', '1');
-  variable_set('user_picture_dimensions', '1024x1024');
-  variable_set('user_picture_file_size', '800');
-  variable_set('user_picture_style', 'thumbnail');
-
-  // Create a default role for site administrators, with all available permissions assigned.
-  $admin_role = new stdClass();
-  $admin_role->name = 'administrator';
-  $admin_role->weight = 4;
-  user_role_save($admin_role);
-  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
-  // Set this as the administrator role.
-  variable_set('user_admin_role', $admin_role->rid);
-
-  // Assign user 1 the "administrator" role.
-  db_insert('users_roles')
-    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
-    ->execute();
-    
-  // Create a content editor role
-  $content_editor = new stdClass();
-  $content_editor->name = 'content editor';
-  $content_editor->weight = 2;
-  user_role_save($content_editor);
+  $themes = array(
+    'default' => variable_get('theme_default', 'bartik'),
+    'admin' => 'seven',
+  );
   
-  // Create a site manager role
-  $site_manager = new stdClass();
-  $site_manager->name = 'site manager';
-  $site_manager->weight = 3;
-  user_role_save($site_manager);
+  $filter_perms = _ucm_setup_filter_formats();
+  _ucm_setup_blocks($themes);
 
-  // Enable the admin theme.
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', 'seven')
-    ->execute();
-  variable_set('admin_theme', 'seven');
-  variable_set('node_admin_theme', '1');
+  _ucm_setup_user_pictures();
+
+  _ucm_setup_roles($filter_perms);
+  
+  _ucm_setup_admin_theme($themes['admin']);
+
+  
 }
 
 function _ucm_setup_filter_formats() {
@@ -119,15 +90,13 @@ function _ucm_setup_filter_formats() {
   return $filter_perms;
 }
 
-function _ucm_setup_blocks() {
+function _ucm_setup_blocks($themes) {
   // Enable some standard blocks.
-  $default_theme = variable_get('theme_default', 'bartik');
-  $admin_theme = 'seven';
   $values = array(
     array(
       'module' => 'system',
       'delta' => 'main',
-      'theme' => $default_theme,
+      'theme' => $themes['default'],
       'status' => 1,
       'weight' => 0,
       'region' => 'content',
@@ -137,7 +106,7 @@ function _ucm_setup_blocks() {
     array(
       'module' => 'node',
       'delta' => 'recent',
-      'theme' => $admin_theme,
+      'theme' => $themes['admin'],
       'status' => 1,
       'weight' => 10,
       'region' => 'dashboard_main',
@@ -147,7 +116,7 @@ function _ucm_setup_blocks() {
     array(
       'module' => 'user',
       'delta' => 'login',
-      'theme' => $default_theme,
+      'theme' => $themes['default'],
       'status' => 1,
       'weight' => 0,
       'region' => 'sidebar_first',
@@ -157,7 +126,7 @@ function _ucm_setup_blocks() {
     array(
       'module' => 'system',
       'delta' => 'help',
-      'theme' => $default_theme,
+      'theme' => $themes['default'],
       'status' => 1,
       'weight' => 0,
       'region' => 'help',
@@ -167,7 +136,7 @@ function _ucm_setup_blocks() {
     array(
       'module' => 'system',
       'delta' => 'main',
-      'theme' => $admin_theme,
+      'theme' => $themes['admin'],
       'status' => 1,
       'weight' => 0,
       'region' => 'content',
@@ -177,7 +146,7 @@ function _ucm_setup_blocks() {
     array(
       'module' => 'system',
       'delta' => 'help',
-      'theme' => $admin_theme,
+      'theme' => $themes['admin'],
       'status' => 1,
       'weight' => 0,
       'region' => 'help',
@@ -187,7 +156,7 @@ function _ucm_setup_blocks() {
     array(
       'module' => 'user',
       'delta' => 'login',
-      'theme' => $admin_theme,
+      'theme' => $themes['admin'],
       'status' => 1,
       'weight' => 10,
       'region' => 'content',
@@ -197,7 +166,7 @@ function _ucm_setup_blocks() {
     array(
       'module' => 'user',
       'delta' => 'new',
-      'theme' => $admin_theme,
+      'theme' => $themes['admin'],
       'status' => 1,
       'weight' => 0,
       'region' => 'dashboard_sidebar',
@@ -210,4 +179,51 @@ function _ucm_setup_blocks() {
     $query->values($record);
   }
   $query->execute();
+}
+
+function _ucm_setup_user_pictures() {
+  // Enable user picture support and set the default to a square thumbnail option.
+  variable_set('user_pictures', '1');
+  variable_set('user_picture_dimensions', '1024x1024');
+  variable_set('user_picture_file_size', '800');
+  variable_set('user_picture_style', 'thumbnail');
+}
+
+function _ucm_setup_roles($filter_perms) {
+  // Create a default role for site administrators, with all available permissions assigned.
+  $admin_role = new stdClass();
+  $admin_role->name = 'administrator';
+  $admin_role->weight = 4;
+  user_role_save($admin_role);
+  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  // Set this as the administrator role.
+  variable_set('user_admin_role', $admin_role->rid);
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+    
+  // Create a content editor role
+  $content_editor = new stdClass();
+  $content_editor->name = 'content editor';
+  $content_editor->weight = 2;
+  user_role_save($content_editor);
+  
+  // Create a site manager role
+  $site_manager = new stdClass();
+  $site_manager->name = 'site manager';
+  $site_manager->weight = 3;
+  user_role_save($site_manager);
+}
+
+function _ucm_setup_admin_theme($theme) {
+  // Enable the admin theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', $theme)
+    ->execute();
+  variable_set('admin_theme', $theme);
+  variable_set('node_admin_theme', '1');
 }
