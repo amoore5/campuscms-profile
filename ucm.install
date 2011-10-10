@@ -217,10 +217,10 @@ function _ucm_setup_roles($filter_perms) {
   
   $content_editor_permissions = array(
     $filter_perms['filtered_html'],
-    //'view content revisions',
+    'view revisions',
     'view own unpublished content',
-    //'access the administrative overlay',
-    'create and edit URL aliases',
+    'access overlay',
+    'create url aliases',
     'view the administration theme',
   );
   user_role_grant_permissions($content_editor->rid, $content_editor_permissions);
@@ -234,19 +234,20 @@ function _ucm_setup_roles($filter_perms) {
   $site_manager_permissions = array(
     $filter_perms['filtered_html'],
     'administer blocks',
-    'use contextual links',
-    'administer menus and menu items',
+    'access contextual links',
+    'administer menu',
     'view own unpublished content',
-    //'view content revisions',
-    'revert content revisions',
-    'delete content revisions',
-    'create and edit url aliases',
+    'access overlay',
+    'view revisions',
+    'revert revisions',
+    'delete revisions',
+    'create url aliases',
     'assign content editor role',
     'assign site manager role',
     'administer site configuration',
     'administer themes',
     'view the administration theme',
-    'view site reports',
+    'access site reports',
     'administer users',
   );
   user_role_grant_permissions($site_manager->rid, $site_manager_permissions);
