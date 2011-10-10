@@ -81,12 +81,11 @@ function _ucm_setup_filter_formats() {
   filter_format_save($full_html_format);
   
   // Enable default permissions for system roles.
-  $filter_perms['filtered_html'] = filter_permission_name($filtered_html_format);
-  $filter_perms['full_html'] = filter_permission_name($full_html_format);
-  
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', $filter_perms['filtered_html']));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', $filter_perms['filtered_html']));
-  
+  $filter_perms = array(
+    'filtered_html' => filter_permission_name($filtered_html_format),
+    'full_html' => filter_permission_name($full_html_format),
+  );
+
   return $filter_perms;
 }
 
@@ -190,6 +189,10 @@ function _ucm_setup_user_pictures() {
 }
 
 function _ucm_setup_roles($filter_perms) {
+  // Set permissions for anonymous and authenticated roles.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', $filter_perms['filtered_html']));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', $filter_perms['filtered_html']));
+  
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'administrator';
