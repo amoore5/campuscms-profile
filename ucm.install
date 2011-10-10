@@ -213,11 +213,13 @@ function _ucm_setup_roles($filter_perms) {
   $content_editor->weight = 2;
   user_role_save($content_editor);
   
+  print_r(user_permission_get_modules());
+  
   $content_editor_permissions = array(
     $filter_perms['filtered_html'],
     //'view content revisions',
     'view own unpublished content',
-    'access the administrative overlay',
+    //'access the administrative overlay',
     'create and edit URL aliases',
     'view the administration theme',
   );
