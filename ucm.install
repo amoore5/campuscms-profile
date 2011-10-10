@@ -213,11 +213,41 @@ function _ucm_setup_roles($filter_perms) {
   $content_editor->weight = 2;
   user_role_save($content_editor);
   
+  $content_editor_permissions = array(
+    $filter_perms['filtered_html'],
+    'view content revisions',
+    'view own unpublished content',
+    'access the administrative overlay',
+    'create and edit URL aliases',
+    'view the administration theme',
+  );
+  user_role_grant_permissions($content_editor->rid, $content_editor_permissions);
+  
   // Create a site manager role
   $site_manager = new stdClass();
   $site_manager->name = 'site manager';
   $site_manager->weight = 3;
   user_role_save($site_manager);
+  
+  $site_manager_permissions = array(
+    $filter_perms['filtered_html'],
+    'administer blocks',
+    'use contextual links',
+    'administer menus and menu items',
+    'view own unpublished content',
+    'view content revisions',
+    'revert content revisions',
+    'delete content revisions',
+    'create and edit url aliases',
+    'assign content editor role',
+    'assign site manager role',
+    'administer site configuration',
+    'administer themes',
+    'view the administration theme',
+    'view site reports',
+    'administer users',
+  );
+  user_role_grant_permissions($site_manager->rid, $site_manager_permissions);
 }
 
 function _ucm_setup_admin_theme($theme) {
