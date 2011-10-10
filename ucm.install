@@ -6,62 +6,6 @@
  * Perform actions to set up the site for this profile.
  */
 function ucm_install() {
-  // Add text formats.
-  $filtered_html_format = array(
-    'format' => 'filtered_html',
-    'name' => 'Filtered HTML',
-    'weight' => 0,
-    'filters' => array(
-      // URL filter.
-      'filter_url' => array(
-        'weight' => 0,
-        'status' => 1,
-      ),
-      // HTML filter.
-      'filter_html' => array(
-        'weight' => 1,
-        'status' => 1,
-      ),
-      // Line break filter.
-      'filter_autop' => array(
-        'weight' => 2,
-        'status' => 1,
-      ),
-      // HTML corrector filter.
-      'filter_htmlcorrector' => array(
-        'weight' => 10,
-        'status' => 1,
-      ),
-    ),
-  );
-  $filtered_html_format = (object) $filtered_html_format;
-  filter_format_save($filtered_html_format);
-
-  $full_html_format = array(
-    'format' => 'full_html',
-    'name' => 'Full HTML',
-    'weight' => 1,
-    'filters' => array(
-      // URL filter.
-      'filter_url' => array(
-        'weight' => 0,
-        'status' => 1,
-      ),
-      // Line break filter.
-      'filter_autop' => array(
-        'weight' => 1,
-        'status' => 1,
-      ),
-      // HTML corrector filter.
-      'filter_htmlcorrector' => array(
-        'weight' => 10,
-        'status' => 1,
-      ),
-    ),
-  );
-  $full_html_format = (object) $full_html_format;
-  filter_format_save($full_html_format);
-
   // Enable some standard blocks.
   $default_theme = variable_get('theme_default', 'bartik');
   $admin_theme = 'seven';
@@ -158,11 +102,88 @@ function ucm_install() {
   variable_set('user_picture_dimensions', '1024x1024');
   variable_set('user_picture_file_size', '800');
   variable_set('user_picture_style', 'thumbnail');
+  
+  $filter_perms = _ucm_setup_filter_formats();
+  _ucm_setup_roles($filter_perms);
+
+  // Enable the admin theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'seven')
+    ->execute();
+  variable_set('admin_theme', 'seven');
+  variable_set('node_admin_theme', '1');
+}
+
+function _ucm_setup_filter_formats() {
+  // Add text formats.
+  $filtered_html_format = array(
+    'format' => 'filtered_html',
+    'name' => 'Filtered HTML',
+    'weight' => 0,
+    'filters' => array(
+      // URL filter.
+      'filter_url' => array(
+        'weight' => 0,
+        'status' => 1,
+      ),
+      // HTML filter.
+      'filter_html' => array(
+        'weight' => 1,
+        'status' => 1,
+      ),
+      // Line break filter.
+      'filter_autop' => array(
+        'weight' => 2,
+        'status' => 1,
+      ),
+      // HTML corrector filter.
+      'filter_htmlcorrector' => array(
+        'weight' => 10,
+        'status' => 1,
+      ),
+    ),
+  );
+  $filtered_html_format = (object) $filtered_html_format;
+  filter_format_save($filtered_html_format);
+
+  $full_html_format = array(
+    'format' => 'full_html',
+    'name' => 'Full HTML',
+    'weight' => 1,
+    'filters' => array(
+      // URL filter.
+      'filter_url' => array(
+        'weight' => 0,
+        'status' => 1,
+      ),
+      // Line break filter.
+      'filter_autop' => array(
+        'weight' => 1,
+        'status' => 1,
+      ),
+      // HTML corrector filter.
+      'filter_htmlcorrector' => array(
+        'weight' => 10,
+        'status' => 1,
+      ),
+    ),
+  );
+  $full_html_format = (object) $full_html_format;
+  filter_format_save($full_html_format);
 
   // Enable default permissions for system roles.
-  $filtered_html_permission = filter_permission_name($filtered_html_format);
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', $filtered_html_permission));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', $filtered_html_permission));
+  $filter_perms['filtered_html'] = filter_permission_name($filtered_html_format);
+  $filter_perms['full_html'] = filter_permission_name($full_html_format);
+  
+  return $filter_perms;
+}
+
+function _ucm_setup_roles($filter_perms) {
+  
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', $filter_perms['filtered_html']));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', $filter_perms['filtered_html']));
 
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
@@ -184,18 +205,39 @@ function ucm_install() {
   $content_editor->weight = 2;
   user_role_save($content_editor);
   
+  $content_editor_permissions = array(
+    $filter_perms['filtered_html'],
+    'view content revisions',
+    'view own unpublished content',
+    'access the administrative overlay',
+    'create and edit URL aliases',
+    'view the administration theme',
+  );
+  user_role_grant_permissions($content_editor->rid, $content_editor_permissions);
+  
   // Create a site manager role
   $site_manager = new stdClass();
   $site_manager->name = 'site manager';
   $site_manager->weight = 3;
   user_role_save($site_manager);
-
-  // Enable the admin theme.
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', 'seven')
-    ->execute();
-  variable_set('admin_theme', 'seven');
-  variable_set('node_admin_theme', '1');
+  
+  $site_manager_permissions = array(
+    $filter_perms['filtered_html'],
+    'administer blocks',
+    'use contextual links',
+    'administer menus and menu items',
+    'view own unpublished content',
+    'view content revisions',
+    'revert content revisions',
+    'delete content revisions',
+    'create and edit url aliases',
+    'assign content editor role',
+    'assign site manager role',
+    'administer site configuration',
+    'administer themes',
+    'view the administration theme',
+    'view site reports',
+    'administer users',
+  );
+  user_role_grant_permissions($site_manager->rid, $site_manager_permissions);
 }
