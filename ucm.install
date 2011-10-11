@@ -309,12 +309,15 @@ function _ucm_setup_quickbar() {
   
   variable_set('quickbar_settings_content-editor', $toolbar_settings);
   
-  // Add the role menu settings
-  variable_set('quickbar_role_menus', $menus);
-  
-  // Add the role weight settings
+  // Add the authenticated user settings for quickbar
+  $menus['authenticated-user'] = 0;
   $weights['authenticated-user'] = 0;
+  
+  // Add the anonymous user settings for quickbar
+  $menus['anonymous-user'] = 0;
   $weights['anonymous-user'] = 1;
+  
+  variable_set('quickbar_role_menus', $menus);
   variable_set('quickbar_role_weights', $weights);
   
 }
