@@ -15,11 +15,12 @@ function ucm_install() {
   _ucm_setup_blocks($themes);
 
   _ucm_setup_user_pictures();
-
+  
   _ucm_setup_roles($filter_perms);
   
+  _ucm_setup_quickbar();
+  
   _ucm_setup_admin_theme($themes['admin']);
-
   
 }
 
@@ -249,6 +250,73 @@ function _ucm_setup_roles($filter_perms) {
     'administer users',
   );
   user_role_grant_permissions($site_manager->rid, $site_manager_permissions);
+}
+
+function _ucm_setup_quickbar() {
+  // Enable faux machine names for roles.
+  variable_set('quickbar_use_machine_names', 1);
+  
+  $toolbar_settings = array(
+    'iconset' => 'quickbar',
+    'sticky' => 0,
+    'float' => 0,
+    'secondary_menu_visibility' => 0,
+    'nofollow' => 0,
+  );
+  
+  // Build administrator toolbar menu
+  $administrator_menu_definition = array(
+    'menu_name' => 'menu-toolbar-administrator',
+    'title' => 'Toolbar - Administrator',
+    'description' => 'This is the administration toolbar for adminstrators.',
+  );
+  
+  menu_save($administrator_menu_definition);
+  
+  // Add administrator menu settings for quickbar.
+  $menus['administrator'] = 'menu-toolbar-administrator';
+  $weights['administrator'] = -10;
+  
+  variable_set('quickbar_settings_administrator', $toolbar_settings);
+  
+  // Build site manager toolbar menu
+  $site_manager_menu_definition = array(
+    'menu_name' => 'menu-toolbar-site-manager',
+    'title' => 'Toolbar - Site Manager',
+    'description' => 'This is the administration toolbar for site managers.',
+  );
+  
+  menu_save($site_manager_menu_definition);
+  
+  // Add site manager settings for quickbar.
+  $menus['site-manager'] = 'menu-toolbar-site-manager';
+  $weights['site-manager'] = -9;
+  
+  variable_set('quickbar_settings_site-manager', $toolbar_settings);
+  
+  // Build content editor toolbar menu
+  $content_editor_menu_definition = array(
+    'menu_name' => 'menu-toolbar-content-editor',
+    'title' => 'Toolbar - Content Editor',
+    'description' => 'This is the administration toolbar for content editors.',
+  );
+  
+  menu_save($content_editor_menu_definition);
+  
+  // Add content editor settings for quickbar
+  $menus['content-editor'] = 'menu-toolbar-content-editor';
+  $weights['content-editor'] = -8;
+  
+  variable_set('quickbar_settings_content-editor', $toolbar_settings);
+  
+  // Add the role menu settings
+  variable_set('quickbar_role_menus', $menus);
+  
+  // Add the role weight settings
+  $weights['authenticated-user'] = 0;
+  $weights['anonymous-user'] = 1;
+  variable_set('quickbar_role_weights', $weights);
+  
 }
 
 function _ucm_setup_admin_theme($theme) {
