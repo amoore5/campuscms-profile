@@ -256,13 +256,30 @@ function _ucm_setup_quickbar() {
   // Enable faux machine names for roles.
   variable_set('quickbar_use_machine_names', 1);
   
-  $toolbar_settings = array(
+  $quickbar_settings = array(
     'iconset' => 'quickbar',
     'sticky' => 0,
     'float' => 0,
     'secondary_menu_visibility' => 0,
     'nofollow' => 0,
   );
+  
+  $quickbar_extras_settings = array(
+    'show_username' => 1,
+    'show_username_prefix' => 'Hello, ',
+    'show_username_suffix' => '',
+    'show_username_link' => 1,
+  );
+  
+  $home_link = array(
+    'link_path' => drupal_get_normal_path('<front>'),
+    'link_title' => 'Home',
+  );
+  
+  $logout_link = array(
+    'link_path' => drupal_get_normal_path('caslogout'),
+    'link_title' => 'Logout',
+  ); 
   
   // Build administrator toolbar menu
   $administrator_menu_definition = array(
@@ -273,11 +290,23 @@ function _ucm_setup_quickbar() {
   
   menu_save($administrator_menu_definition);
   
+  // Add Home Menu Item
+  $administrator_home_link = $home_link;
+  $administrator_home_link['menu_name'] = 'menu-toolbar-administrator';
+  menu_link_save($administrator_home_link);
+  
+  // Add Logout Menu Item
+  $administrator_logout_link = $logout_link;
+  $administrator_logout_link['menu_name'] = 'menu-toolbar-administrator';
+  menu_link_save($administrator_logout_link);
+  
+  
   // Add administrator menu settings for quickbar.
   $menus['administrator'] = 'menu-toolbar-administrator';
   $weights['administrator'] = -10;
   
-  variable_set('quickbar_settings_administrator', $toolbar_settings);
+  variable_set('quickbar_settings_administrator', $quickbar_settings);
+  variable_set('quickbar_extras_settings_administrator', $quickbar_extras_settings);
   
   // Build site manager toolbar menu
   $site_manager_menu_definition = array(
@@ -288,11 +317,22 @@ function _ucm_setup_quickbar() {
   
   menu_save($site_manager_menu_definition);
   
+  // Add Home Menu Item
+  $site_manager_home_link = $home_link;
+  $site_manager_home_link['menu_name'] = 'menu-toolbar-site-manager';
+  menu_link_save($site_manager_home_link);
+  
+  // Add Logout Menu Item
+  $site_manager_logout_link = $logout_link;
+  $site_manager_logout_link['menu_name'] = 'menu-toolbar-site-manager';
+  menu_link_save($site_manager_logout_link);
+  
   // Add site manager settings for quickbar.
   $menus['site-manager'] = 'menu-toolbar-site-manager';
   $weights['site-manager'] = -9;
   
-  variable_set('quickbar_settings_site-manager', $toolbar_settings);
+  variable_set('quickbar_settings_site-manager', $quickbar_settings);
+  variable_set('quickbar_extras_settings_site-manager', $quickbar_extras_settings);
   
   // Build content editor toolbar menu
   $content_editor_menu_definition = array(
@@ -303,11 +343,22 @@ function _ucm_setup_quickbar() {
   
   menu_save($content_editor_menu_definition);
   
+  // Add Home Menu Item
+  $content_editor_home_link = $home_link;
+  $content_editor_home_link['menu_name'] = 'menu-toolbar-content-editor';
+  menu_link_save($content_editor_home_link);
+  
+  // Add Logout Menu Item
+  $content_editor_logout_link = $logout_link;
+  $content_editor_logout_link['menu_name'] = 'menu-toolbar-content-editor';
+  menu_link_save($content_editor_logout_link);
+  
   // Add content editor settings for quickbar
   $menus['content-editor'] = 'menu-toolbar-content-editor';
   $weights['content-editor'] = -8;
   
-  variable_set('quickbar_settings_content-editor', $toolbar_settings);
+  variable_set('quickbar_settings_content-editor', $quickbar_settings);
+  variable_set('quickbar_extras_settings_content-editor', $quickbar_extras_settings);
   
   // Add the authenticated user settings for quickbar
   $menus['authenticated-user'] = 0;
