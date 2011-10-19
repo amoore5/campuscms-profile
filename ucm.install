@@ -11,6 +11,8 @@ function ucm_install() {
     'admin' => 'seven',
   );
   
+  variable_set('theme_default', $themes['default']);
+  
   $filter_perms = _ucm_setup_filter_formats();
   _ucm_setup_blocks($themes);
 
