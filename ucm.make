@@ -28,4 +28,12 @@ projects[smtp] = 1.0-beta1
 projects[transliteration] = 3.x-dev
 projects[wysiwyg] = 2.1
 projects[menu_admin_per_menu] = 1.0
+
+; Theme ========================================================================
 projects[zen] = 3.1
+projects[inception][type] = theme
+projects[inception][version] = 2.x-dev
+projects[inception][download][type] = git
+projects[inception][download][url] = git@bardstale.ucmerced.edu:cms-theme-inception.git
+projects[inception][download][branch] = 7.x-2.x
+projects[inception][directory_name] = inception
