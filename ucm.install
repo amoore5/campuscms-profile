@@ -14,6 +14,9 @@ function ucm_install() {
   variable_set('theme_default', $themes['default']);
   
   $filter_perms = _ucm_setup_filter_formats();
+  
+  _ucm_setup_menus();
+  
   _ucm_setup_blocks($themes);
 
   _ucm_setup_user_pictures();
@@ -90,6 +93,35 @@ function _ucm_setup_filter_formats() {
   );
 
   return $filter_perms;
+}
+
+function _ucm_setup_menus() {
+  // Build footer 1 menu
+  $footer_1_definition = array(
+    'menu_name' => 'menu-footer-1',
+    'title' => 'Footer 1',
+    'description' => 'This is the first footer menu.',
+  );
+  
+  menu_save($footer_1_definition);
+  
+  // Build footer 2 menu
+  $footer_2_definition = array(
+    'menu_name' => 'menu-footer-2',
+    'title' => 'Footer 2',
+    'description' => 'This is the second footer menu.',
+  );
+  
+  menu_save($footer_2_definition);
+  
+  // Build footer 3 menu
+  $footer_3_definition = array(
+    'menu_name' => 'menu-footer-3',
+    'title' => 'Footer 3',
+    'description' => 'This is the third footer menu.',
+  );
+  
+  menu_save($footer_3_definition);
 }
 
 function _ucm_setup_blocks($themes) {
@@ -223,6 +255,7 @@ function _ucm_setup_roles($filter_perms) {
     'access overlay',
     'create url aliases',
     'view the administration theme',
+    'administer main-menu menu items',
   );
   user_role_grant_permissions($content_editor->rid, $content_editor_permissions);
   
@@ -250,6 +283,7 @@ function _ucm_setup_roles($filter_perms) {
     'view the administration theme',
     'access site reports',
     'administer users',
+    'administer main-menu menu items',
   );
   user_role_grant_permissions($site_manager->rid, $site_manager_permissions);
 }
