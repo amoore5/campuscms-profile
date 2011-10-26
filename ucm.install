@@ -274,7 +274,6 @@ function _ucm_setup_roles($filter_perms) {
     $filter_perms['filtered_html'],
     'administer blocks',
     'access contextual links',
-    'administer menu',
     'view own unpublished content',
     'access overlay',
     'view revisions',
