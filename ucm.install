@@ -259,8 +259,8 @@ function _ucm_setup_roles($filter_perms) {
     'create url aliases',
     'view the administration theme',
     'administer main-menu menu items',
-    'administer footer-2 menu items',
-    'administer footer-3 menu items',
+    'administer menu-footer-2 menu items',
+    'administer menu-footer-3 menu items',
   );
   user_role_grant_permissions($content_editor->rid, $content_editor_permissions);
   
@@ -289,8 +289,8 @@ function _ucm_setup_roles($filter_perms) {
     'access site reports',
     'administer users',
     'administer main-menu menu items',
-    'administer footer-2 menu items',
-    'administer footer-3 menu items',
+    'administer menu-footer-2 menu items',
+    'administer menu-footer-3 menu items',
   );
   user_role_grant_permissions($site_manager->rid, $site_manager_permissions);
 }
