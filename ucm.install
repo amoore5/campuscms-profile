@@ -349,7 +349,7 @@ function _ucm_setup_quickbar() {
   variable_set('quickbar_settings_administrator', $quickbar_settings);
   
   $administrator_quickbar_extras_settings = $quickbar_extras_settings;
-  $administrator_quickbar_extras_settings['menu'][$administrator_logout_mlid] = 'right';
+  $administrator_quickbar_extras_settings['menu']['mlid_' . $administrator_logout_mlid] = 'right';
   variable_set('quickbar_extras_settings_administrator', $administrator_quickbar_extras_settings);
   
   // Build site manager toolbar menu
@@ -378,10 +378,8 @@ function _ucm_setup_quickbar() {
   variable_set('quickbar_settings_site-manager', $quickbar_settings);
   
   $site_manager_quickbar_extras_settings = $quickbar_extras_settings;
-  $site_manager_quickbar_extras_settings['menu'][$site_manager_logout_mlid] = 'right';
+  $site_manager_quickbar_extras_settings['menu']['mlid_' . $site_manager_logout_mlid] = 'right';
   variable_set('quickbar_extras_settings_site-manager', $site_manager_quickbar_extras_settings);
-  
-  print_r($site_manager_quickbar_extras_settings);
   
   // Build content editor toolbar menu
   $content_editor_menu_definition = array(
@@ -409,7 +407,7 @@ function _ucm_setup_quickbar() {
   variable_set('quickbar_settings_content-editor', $quickbar_settings);
   
   $content_editor_quickbar_extras_settings = $quickbar_extras_settings;
-  $content_editor_quickbar_extras_settings['menu'][$content_editor_logout_mlid] = 'right';
+  $content_editor_quickbar_extras_settings['menu']['mlid_' . $content_editor_logout_mlid] = 'right';
   variable_set('quickbar_extras_settings_content-editor', $content_editor_quickbar_extras_settings);
   
   menu_cache_clear_all();
