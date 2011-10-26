@@ -381,6 +381,8 @@ function _ucm_setup_quickbar() {
   $site_manager_quickbar_extras_settings['menu'][$site_manager_logout_mlid] = 'right';
   variable_set('quickbar_extras_settings_site-manager', $site_manager_quickbar_extras_settings);
   
+  print_r($site_manager_quickbar_extras_settings);
+  
   // Build content editor toolbar menu
   $content_editor_menu_definition = array(
     'menu_name' => 'menu-toolbar-content-editor',
