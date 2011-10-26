@@ -40,5 +40,6 @@ dependencies[] = role_delegation
 dependencies[] = smtp
 dependencies[] = transliteration
 dependencies[] = wysiwyg
+dependencies[] = menu_admin_per_menu
 files[] = ucm.profile
 
