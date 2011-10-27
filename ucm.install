@@ -318,12 +318,39 @@ function _ucm_setup_quickbar() {
     'link_title' => 'Home',
   );
   
+  $add_content_link = array(
+    'link_path' => drupal_get_normal_path('node/add'),
+    'link_title' => 'Add Content',
+  );
+  
+  $manage_content_link = array(
+    'link_path' => drupal_get_normal_path('admin/content'),
+    'link_title' => 'Manage Content',
+  );
+  
+  $menus_link = array(
+    'link_path' => drupal_get_normal_path('admin/structure/menu'),
+    'link_title' => 'Menus',
+  );
+  
+  $users_link = array(
+    'link_path' => drupal_get_normal_path('admin/people'),
+    'link_title' => 'Users',
+  );
+  
+  $site_configuration_link = array(
+    'link_path' => drupal_get_normal_path('admin/config'),
+    'link_title' => 'Site Configuration',
+  );
+  
   $logout_link = array(
     'link_path' => drupal_get_normal_path('caslogout'),
     'link_title' => 'Logout',
   ); 
   
-  // Build administrator toolbar menu
+  /**
+   * Build administrator toolbar menu
+   */
   $administrator_menu_definition = array(
     'menu_name' => 'menu-toolbar-administrator',
     'title' => 'Toolbar - Administrator',
@@ -352,7 +379,9 @@ function _ucm_setup_quickbar() {
   $administrator_quickbar_extras_settings['menu']['mlid_' . $administrator_logout_mlid] = 'right';
   variable_set('quickbar_extras_settings_administrator', $administrator_quickbar_extras_settings);
   
-  // Build site manager toolbar menu
+  /**
+   * Build site manager toolbar menu
+   */
   $site_manager_menu_definition = array(
     'menu_name' => 'menu-toolbar-site-manager',
     'title' => 'Toolbar - Site Manager',
@@ -365,6 +394,31 @@ function _ucm_setup_quickbar() {
   $site_manager_home_link = $home_link;
   $site_manager_home_link['menu_name'] = 'menu-toolbar-site-manager';
   menu_link_save($site_manager_home_link);
+  
+  // Add Add Content Menu Item
+  $site_manager_add_content_link = $add_content_link;
+  $site_manager_add_content_link['menu_name'] = 'menu-toolbar-site-manager';
+  menu_link_save($site_manager_add_content_link);
+  
+  // Add Manage Content Menu Item
+  $site_manager_manage_content_link = $manage_content_link;
+  $site_manager_manage_content_link['menu_name'] = 'menu-toolbar-site-manager';
+  menu_link_save($site_manager_manage_content_link);
+  
+  // Add Menus Menu Item
+  $site_manager_menus_link = $menus_link;
+  $site_manager_menus_link['menu_name'] = 'menu-toolbar-site-manager';
+  menu_link_save($site_manager_menus_link);
+  
+  // Add Users Menu Item
+  $site_manager_users_link = $users_link;
+  $site_manager_users_link['menu_name'] = 'menu-toolbar-site-manager';
+  menu_link_save($site_manager_users_link);
+  
+  // Add Site Configuration Menu Item
+  $site_manager_site_configuration_link = $site_configuration_link;
+  $site_manager_site_configuration_link['menu_name'] = 'menu-toolbar-site-manager';
+  menu_link_save($site_manager_site_configuration_link);
   
   // Add Logout Menu Item
   $site_manager_logout_link = $logout_link;
@@ -381,7 +435,9 @@ function _ucm_setup_quickbar() {
   $site_manager_quickbar_extras_settings['menu']['mlid_' . $site_manager_logout_mlid] = 'right';
   variable_set('quickbar_extras_settings_site-manager', $site_manager_quickbar_extras_settings);
   
-  // Build content editor toolbar menu
+  /**
+   * Build content editor toolbar menu
+   */
   $content_editor_menu_definition = array(
     'menu_name' => 'menu-toolbar-content-editor',
     'title' => 'Toolbar - Content Editor',
@@ -394,6 +450,21 @@ function _ucm_setup_quickbar() {
   $content_editor_home_link = $home_link;
   $content_editor_home_link['menu_name'] = 'menu-toolbar-content-editor';
   menu_link_save($content_editor_home_link);
+  
+  // Add Add Content Menu Item
+  $content_editor_add_content_link = $add_content_link;
+  $content_editor_add_content_link['menu_name'] = 'menu-toolbar-content-editor';
+  menu_link_save($content_editor_add_content_link);
+  
+  // Add Manage Content Menu Item
+  $content_editor_manage_content_link = $manage_content_link;
+  $content_editor_manage_content_link['menu_name'] = 'menu-toolbar-content-editor';
+  menu_link_save($content_editor_manage_content_link);
+  
+  // Add Menus Menu Item
+  $content_editor_menus_link = $menus_link;
+  $content_editor_menus_link['menu_name'] = 'menu-toolbar-content-editor';
+  menu_link_save($content_editor_menus_link);
   
   // Add Logout Menu Item
   $content_editor_logout_link = $logout_link;
