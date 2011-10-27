@@ -254,7 +254,7 @@ function _ucm_setup_roles($filter_perms) {
   $content_editor_permissions = array(
     $filter_perms['filtered_html'],
     //'administer content',
-    'access the content overview page',
+    //'access the content overview page',
     'view revisions',
     'view own unpublished content',
     'access overlay',
@@ -279,7 +279,7 @@ function _ucm_setup_roles($filter_perms) {
     'view own unpublished content',
     'access overlay',
     //'administer content',
-    'access the content overview page',
+    //'access the content overview page',
     'view revisions',
     'revert revisions',
     'delete revisions',
