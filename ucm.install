@@ -99,32 +99,32 @@ function _ucm_setup_filter_formats() {
 }
 
 function _ucm_setup_menus() {
-  // Build footer 1 menu
-  $footer_1_definition = array(
-    'menu_name' => 'menu-footer-1',
-    'title' => 'Footer 1',
-    'description' => 'This is the first footer menu.',
+  // Build footer left menu
+  $footer_left_definition = array(
+    'menu_name' => 'menu-footer-left',
+    'title' => 'Footer Left',
+    'description' => 'This is the left footer menu.',
   );
   
-  menu_save($footer_1_definition);
+  menu_save($footer_left_definition);
   
-  // Build footer 2 menu
-  $footer_2_definition = array(
-    'menu_name' => 'menu-footer-2',
-    'title' => 'Footer 2',
-    'description' => 'This is the second footer menu.',
+  // Build footer center menu
+  $footer_center_definition = array(
+    'menu_name' => 'menu-footer-center',
+    'title' => 'Footer Center',
+    'description' => 'This is the center footer menu.',
   );
   
-  menu_save($footer_2_definition);
+  menu_save($footer_center_definition);
   
-  // Build footer 3 menu
-  $footer_3_definition = array(
-    'menu_name' => 'menu-footer-3',
-    'title' => 'Footer 3',
-    'description' => 'This is the third footer menu.',
+  // Build footer right menu
+  $footer_right_definition = array(
+    'menu_name' => 'menu-footer-right',
+    'title' => 'Footer Right',
+    'description' => 'This is the right footer menu.',
   );
   
-  menu_save($footer_3_definition);
+  menu_save($footer_right_definition);
 }
 
 function _ucm_setup_blocks($themes) {
@@ -261,8 +261,8 @@ function _ucm_setup_roles($filter_perms) {
     'create url aliases',
     'view the administration theme',
     'administer main-menu menu items',
-    'administer menu-footer-2 menu items',
-    'administer menu-footer-3 menu items',
+    'administer menu-footer-center menu items',
+    'administer menu-footer-right menu items',
   );
   user_role_grant_permissions($content_editor->rid, $content_editor_permissions);
   
@@ -292,8 +292,8 @@ function _ucm_setup_roles($filter_perms) {
     'access site reports',
     'administer users',
     'administer main-menu menu items',
-    'administer menu-footer-2 menu items',
-    'administer menu-footer-3 menu items',
+    'administer menu-footer-center menu items',
+    'administer menu-footer-right menu items',
   );
   user_role_grant_permissions($site_manager->rid, $site_manager_permissions);
 }
