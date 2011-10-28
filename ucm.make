@@ -5,7 +5,6 @@ api = 2
 
 projects[ctools] = 1.0-rc1
 projects[features] = 1.0-beta4
-projects[features][patch][] = "http://drupal.org/files/export-query-error-1309176-1.patch"
 projects[quickbar][type] = module
 projects[quickbar][version] = 2.x-dev
 projects[quickbar][download][type] = git
@@ -14,6 +13,7 @@ projects[quickbar][download][branch] = 7.x-2.x
 projects[pathauto] = 1.0-rc2
 projects[devel] = 1.2
 projects[strongarm] = 2.0-beta4
+projects[strongarm][patch][] = "http://drupal.org/files/export-query-error-1309176-1.patch"
 projects[panels] = 3.0-alpha3
 projects[menu_block] = 2.2
 projects[menu_breadcrumb] = 1.3
