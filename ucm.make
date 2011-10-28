@@ -35,7 +35,7 @@ projects[admin_toolbar_site_manager][type] = module
 projects[admin_toolbar_site_manager][version] = 1.0
 projects[admin_toolbar_site_manager][download][type] = git
 projects[admin_toolbar_site_manager][download][url] = git@bardstale.ucmerced.edu:admin_toolbar_site_manager.git
-projects[admin_toolbar_site_manager][download][tag] = 1.0
+projects[admin_toolbar_site_manager][download][branch] = master
 projects[admin_toolbar_site_manager][subdir] = features
 
 ; Theme ========================================================================
