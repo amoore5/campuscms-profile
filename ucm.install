@@ -396,7 +396,7 @@ function _ucm_setup_quickbar() {
   
   // Add site manager settings for quickbar
   $menus['site-manager'] = 'menu-toolbar-site-manager';
-  $weights['site-manager'] = -8;
+  $weights['site-manager '] = -9;
   
   /**
    * Build content editor toolbar menu
