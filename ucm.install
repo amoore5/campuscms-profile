@@ -393,7 +393,7 @@ function _ucm_setup_quickbar() {
   );
   
   menu_save($site_manager_menu_definition);
-  
+  /**
   // Add Home Menu Item
   $site_manager_home_link = $home_link;
   $site_manager_home_link['menu_name'] = 'menu-toolbar-site-manager';
@@ -438,6 +438,7 @@ function _ucm_setup_quickbar() {
   $site_manager_quickbar_extras_settings = $quickbar_extras_settings;
   $site_manager_quickbar_extras_settings['menu']['mlid_' . $site_manager_logout_mlid] = 'right';
   variable_set('quickbar_extras_settings_site-manager', $site_manager_quickbar_extras_settings);
+  **/
   
   /**
    * Build content editor toolbar menu
