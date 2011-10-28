@@ -99,32 +99,32 @@ function _ucm_setup_filter_formats() {
 }
 
 function _ucm_setup_menus() {
-  // Build footer left menu
-  $footer_left_definition = array(
-    'menu_name' => 'menu-footer-left',
-    'title' => 'Footer Left',
+  // Build left footer menu
+  $left_footer_definition = array(
+    'menu_name' => 'menu-left-footer',
+    'title' => 'Left Footer',
     'description' => 'This is the left footer menu.',
   );
   
-  menu_save($footer_left_definition);
+  menu_save($left_footer_definition);
   
-  // Build footer center menu
-  $footer_center_definition = array(
-    'menu_name' => 'menu-footer-center',
-    'title' => 'Footer Center',
+  // Build center footer menu
+  $center_footer_definition = array(
+    'menu_name' => 'menu-center-footer',
+    'title' => 'Center Footer',
     'description' => 'This is the center footer menu.',
   );
   
-  menu_save($footer_center_definition);
+  menu_save($center_footer_definition);
   
-  // Build footer right menu
-  $footer_right_definition = array(
-    'menu_name' => 'menu-footer-right',
-    'title' => 'Footer Right',
+  // Build right footer menu
+  $right_footer_definition = array(
+    'menu_name' => 'menu-right-footer',
+    'title' => 'Right Footer',
     'description' => 'This is the right footer menu.',
   );
   
-  menu_save($footer_right_definition);
+  menu_save($right_footer_definition);
 }
 
 function _ucm_setup_blocks($themes) {
