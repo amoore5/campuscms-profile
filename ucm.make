@@ -31,6 +31,14 @@ projects[wysiwyg] = 2.1
 projects[menu_admin_per_menu] = 1.0
 
 ; Features =====================================================================
+
+projects[admin_toolbar_admin][type] = module
+projects[admin_toolbar_admin][version] = 1.0
+projects[admin_toolbar_admin][download][type] = git
+projects[admin_toolbar_admin][download][url] = git@bardstale.ucmerced.edu:admin_toolbar_admin.git
+projects[admin_toolbar_admin][download][branch] = master
+projects[admin_toolbar_admin][subdir] = features
+
 projects[admin_toolbar_site_manager][type] = module
 projects[admin_toolbar_site_manager][version] = 1.0
 projects[admin_toolbar_site_manager][download][type] = git
