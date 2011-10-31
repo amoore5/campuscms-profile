@@ -37,28 +37,28 @@ projects[admin_toolbar_admin][version] = 1.0
 projects[admin_toolbar_admin][download][type] = git
 projects[admin_toolbar_admin][download][url] = git@bardstale.ucmerced.edu:admin_toolbar_admin.git
 projects[admin_toolbar_admin][download][branch] = master
-projects[admin_toolbar_admin][subdir] = features
+projects[admin_toolbar_admin][subdir] = custom/features
 
 projects[admin_toolbar_site_manager][type] = module
 projects[admin_toolbar_site_manager][version] = 1.0
 projects[admin_toolbar_site_manager][download][type] = git
 projects[admin_toolbar_site_manager][download][url] = git@bardstale.ucmerced.edu:admin_toolbar_site_manager.git
 projects[admin_toolbar_site_manager][download][branch] = master
-projects[admin_toolbar_site_manager][subdir] = features
+projects[admin_toolbar_site_manager][subdir] = custom/features
 
 projects[admin_toolbar_content_editor][type] = module
 projects[admin_toolbar_content_editor][version] = 1.0
 projects[admin_toolbar_content_editor][download][type] = git
 projects[admin_toolbar_content_editor][download][url] = git@bardstale.ucmerced.edu:admin_toolbar_content_editor.git
 projects[admin_toolbar_content_editor][download][branch] = master
-projects[admin_toolbar_content_editor][subdir] = features
+projects[admin_toolbar_content_editor][subdir] = custom/features
 
 projects[ucm_feature_wysiwyg][type] = module
 projects[ucm_feature_wysiwyg][version] = 1.0
 projects[ucm_feature_wysiwyg][download][type] = git
 projects[ucm_feature_wysiwyg][download][url] = git@bardstale.ucmerced.edu:cms-features-wysiwyg.git
 projects[ucm_feature_wysiwyg][download][branch] = 7.x-1.x
-projects[ucm_feature_wysiwyg][subdir] = features
+projects[ucm_feature_wysiwyg][subdir] = custom/features
 projects[ucm_feature_wysiwyg][directory_name] = ucm_feature_wysiwyg
 
 ; Theme ========================================================================
