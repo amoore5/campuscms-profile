@@ -53,6 +53,14 @@ projects[admin_toolbar_content_editor][download][url] = git@bardstale.ucmerced.e
 projects[admin_toolbar_content_editor][download][branch] = master
 projects[admin_toolbar_content_editor][subdir] = features
 
+projects[ucm_feature_wysiwyg][type] = module
+projects[ucm_feature_wysiwyg][version] = 1.0
+projects[ucm_feature_wysiwyg][download][type] = git
+projects[ucm_feature_wysiwyg][download][url] = git@bardstale.ucmerced.edu:cms-features-wysiwyg.git
+projects[ucm_feature_wysiwyg][download][branch] = 7.x-1.x
+projects[ucm_feature_wysiwyg][subdir] = features
+projects[ucm_feature_wysiwyg][directory_name] = ucm_feature_wysiwyg
+
 ; Theme ========================================================================
 projects[zen] = 3.1
 projects[inception][type] = theme
