@@ -28,6 +28,11 @@ projects[role_delegation] = 1.1
 projects[smtp] = 1.0-beta1
 projects[transliteration] = 3.x-dev
 projects[menu_admin_per_menu] = 1.0
+projects[nodeformcols][type] = module
+projects[nodeformcols][version] = 1.x-dev
+projects[nodeformcols][download][type] = git
+projects[nodeformcols][download][url] = http://git.drupal.org/project/nodeformcols.git
+projects[nodeformcols][download][branch] = 7.x-1.x
 
 ; Features =====================================================================
 
@@ -59,6 +64,14 @@ projects[ucm_feature_wysiwyg][download][url] = git@bardstale.ucmerced.edu:cms-fe
 projects[ucm_feature_wysiwyg][download][branch] = 7.x-1.x
 projects[ucm_feature_wysiwyg][subdir] = custom/features
 projects[ucm_feature_wysiwyg][directory_name] = ucm_feature_wysiwyg
+
+projects[ucm_feature_page][type] = module
+projects[ucm_feature_page][version] = 1.0
+projects[ucm_feature_page][download][type] = git
+projects[ucm_feature_page][download][url] = git@bardstale.ucmerced.edu:cms-feature-page.git
+projects[ucm_feature_page][download][branch] = master
+projects[ucm_feature_page][subdir] = custom/features
+projects[ucm_feature_page][directory_name] = ucm_feature_page
 
 ; Theme ========================================================================
 projects[zen] = 3.1
