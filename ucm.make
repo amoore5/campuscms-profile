@@ -36,12 +36,12 @@ projects[nodeformcols][download][branch] = 7.x-1.x
 
 ; Features =====================================================================
 
-projects[admin_toolbar_admin][type] = module
-projects[admin_toolbar_admin][version] = 1.0
-projects[admin_toolbar_admin][download][type] = git
-projects[admin_toolbar_admin][download][url] = git@bardstale.ucmerced.edu:admin_toolbar_admin.git
-projects[admin_toolbar_admin][download][branch] = master
-projects[admin_toolbar_admin][subdir] = custom/features
+projects[cms_feature_admin_toolbar_admin][type] = module
+projects[cms_feature_admin_toolbar_admin][version] = 1.0
+projects[cms_feature_admin_toolbar_admin][download][type] = git
+projects[cms_feature_admin_toolbar_admin][download][url] = git://github.com/amoore5/cms-feature-admin-toolbar-admin.git
+projects[cms_feature_admin_toolbar_admin][download][branch] = master
+projects[cms_feature_admin_toolbar_admin][subdir] = custom/features
 
 projects[admin_toolbar_site_manager][type] = module
 projects[admin_toolbar_site_manager][version] = 1.0
