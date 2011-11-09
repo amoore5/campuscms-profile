@@ -44,7 +44,7 @@ dependencies[] = menu_admin_per_menu
 
 ; Feature Dependencies
 dependencies[] = cms_feature_admin_toolbar_admin
-dependencies[] = admin_toolbar_site_manager
+dependencies[] = cms_feature_admin_toolbar_site_manager
 dependencies[] = cms_feature_admin_toolbar_content_editor
 dependencies[] = ucm_feature_wysiwyg
 dependencies[] = ucm_feature_page

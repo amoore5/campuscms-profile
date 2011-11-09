@@ -43,12 +43,12 @@ projects[cms_feature_admin_toolbar_admin][download][url] = git://github.com/amoo
 projects[cms_feature_admin_toolbar_admin][download][branch] = master
 projects[cms_feature_admin_toolbar_admin][subdir] = custom/features
 
-projects[admin_toolbar_site_manager][type] = module
-projects[admin_toolbar_site_manager][version] = 1.0
-projects[admin_toolbar_site_manager][download][type] = git
-projects[admin_toolbar_site_manager][download][url] = git@bardstale.ucmerced.edu:admin_toolbar_site_manager.git
-projects[admin_toolbar_site_manager][download][branch] = master
-projects[admin_toolbar_site_manager][subdir] = custom/features
+projects[cms_feature_admin_toolbar_site_manager][type] = module
+projects[cms_feature_admin_toolbar_site_manager][version] = 1.0
+projects[cms_feature_admin_toolbar_site_manager][download][type] = git
+projects[cms_feature_admin_toolbar_site_manager][download][url] = git://github.com/amoore5/cms-feature-admin-toolbar-site-manager.git
+projects[cms_feature_admin_toolbar_site_manager][download][branch] = master
+projects[cms_feature_admin_toolbar_site_manager][subdir] = custom/features
 
 projects[cms_feature_admin_toolbar_content_editor][type] = module
 projects[cms_feature_admin_toolbar_content_editor][version] = 1.0
