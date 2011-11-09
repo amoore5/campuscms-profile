@@ -50,12 +50,12 @@ projects[admin_toolbar_site_manager][download][url] = git@bardstale.ucmerced.edu
 projects[admin_toolbar_site_manager][download][branch] = master
 projects[admin_toolbar_site_manager][subdir] = custom/features
 
-projects[admin_toolbar_content_editor][type] = module
-projects[admin_toolbar_content_editor][version] = 1.0
-projects[admin_toolbar_content_editor][download][type] = git
-projects[admin_toolbar_content_editor][download][url] = git@bardstale.ucmerced.edu:admin_toolbar_content_editor.git
-projects[admin_toolbar_content_editor][download][branch] = master
-projects[admin_toolbar_content_editor][subdir] = custom/features
+projects[cms_feature_admin_toolbar_content_editor][type] = module
+projects[cms_feature_admin_toolbar_content_editor][version] = 1.0
+projects[cms_feature_admin_toolbar_content_editor][download][type] = git
+projects[cms_feature_admin_toolbar_content_editor][download][url] = git://github.com/amoore5/cms-feature-admin-toolbar-content-editor.git
+projects[cms_feature_admin_toolbar_content_editor][download][branch] = master
+projects[cms_feature_admin_toolbar_content_editor][subdir] = custom/features
 
 projects[ucm_feature_wysiwyg][type] = module
 projects[ucm_feature_wysiwyg][version] = 1.0
