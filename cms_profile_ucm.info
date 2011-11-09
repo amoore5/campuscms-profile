@@ -48,5 +48,5 @@ dependencies[] = cms_feature_admin_toolbar_site_manager
 dependencies[] = cms_feature_admin_toolbar_content_editor
 dependencies[] = cms_feature_wysiwyg
 dependencies[] = cms_feature_page
-files[] = ucm.profile
+files[] = cms_profile_ucm.profile
 
