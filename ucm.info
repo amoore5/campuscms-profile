@@ -43,7 +43,7 @@ dependencies[] = wysiwyg
 dependencies[] = menu_admin_per_menu
 
 ; Feature Dependencies
-dependencies[] = admin_toolbar_admin
+dependencies[] = cms_feature_admin_toolbar_admin
 dependencies[] = admin_toolbar_site_manager
 dependencies[] = admin_toolbar_content_editor
 dependencies[] = ucm_feature_wysiwyg
