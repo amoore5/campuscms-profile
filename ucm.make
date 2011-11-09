@@ -57,12 +57,12 @@ projects[cms_feature_admin_toolbar_content_editor][download][url] = git://github
 projects[cms_feature_admin_toolbar_content_editor][download][branch] = master
 projects[cms_feature_admin_toolbar_content_editor][subdir] = custom/features
 
-projects[ucm_feature_wysiwyg][type] = module
-projects[ucm_feature_wysiwyg][version] = 1.0
-projects[ucm_feature_wysiwyg][download][type] = git
-projects[ucm_feature_wysiwyg][download][url] = git://github.com/amoore5/cms-feature-wysiwyg.git
-projects[ucm_feature_wysiwyg][download][branch] = 7.x-1.x
-projects[ucm_feature_wysiwyg][subdir] = custom/features
+projects[cms_feature_wysiwyg][type] = module
+projects[cms_feature_wysiwyg][version] = 1.0
+projects[cms_feature_wysiwyg][download][type] = git
+projects[cms_feature_wysiwyg][download][url] = git://github.com/amoore5/cms-feature-wysiwyg.git
+projects[cms_feature_wysiwyg][download][branch] = master
+projects[cms_feature_wysiwyg][subdir] = custom/features
 
 projects[cms_feature_page][type] = module
 projects[cms_feature_page][version] = 1.0
