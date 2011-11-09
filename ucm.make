@@ -60,15 +60,14 @@ projects[cms_feature_admin_toolbar_content_editor][subdir] = custom/features
 projects[ucm_feature_wysiwyg][type] = module
 projects[ucm_feature_wysiwyg][version] = 1.0
 projects[ucm_feature_wysiwyg][download][type] = git
-projects[ucm_feature_wysiwyg][download][url] = git@bardstale.ucmerced.edu:cms-feature-wysiwyg.git
+projects[ucm_feature_wysiwyg][download][url] = git://github.com/amoore5/cms-feature-wysiwyg.git
 projects[ucm_feature_wysiwyg][download][branch] = 7.x-1.x
 projects[ucm_feature_wysiwyg][subdir] = custom/features
-projects[ucm_feature_wysiwyg][directory_name] = ucm_feature_wysiwyg
 
 projects[cms_feature_page][type] = module
 projects[cms_feature_page][version] = 1.0
 projects[cms_feature_page][download][type] = git
-projects[cms_feature_page][download][url] = git@bardstale.ucmerced.edu:cms-feature-page.git
+projects[cms_feature_page][download][url] = git://github.com/amoore5/cms-feature-page.git
 projects[cms_feature_page][download][branch] = master
 projects[cms_feature_page][subdir] = custom/features
 
