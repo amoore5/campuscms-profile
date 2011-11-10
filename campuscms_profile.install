@@ -5,7 +5,7 @@
  *
  * Perform actions to set up the site for this profile.
  */
-function campuscms_profile_ucm_install() {
+function campuscms_profile_install() {
   $themes = array(
     'default' => 'inception',
     'admin' => 'seven',
@@ -13,23 +13,23 @@ function campuscms_profile_ucm_install() {
   
   variable_set('theme_default', $themes['default']);
   
-  $filter_perms = _campuscms_profile_ucm_setup_filter_formats();
+  $filter_perms = _campuscms_profile_setup_filter_formats();
   
-  _campuscms_profile_ucm_setup_menus();
+  _campuscms_profile_setup_menus();
   
-  _campuscms_profile_ucm_setup_blocks($themes);
+  _campuscms_profile_setup_blocks($themes);
 
-  _campuscms_profile_ucm_setup_user_pictures();
+  _campuscms_profile_setup_user_pictures();
   
-  _campuscms_profile_ucm_setup_roles($filter_perms);
+  _campuscms_profile_setup_roles($filter_perms);
   
-  _campuscms_profile_ucm_setup_quickbar();
+  _campuscms_profile_setup_quickbar();
   
-  _campuscms_profile_ucm_setup_admin_theme($themes['admin']);
+  _campuscms_profile_setup_admin_theme($themes['admin']);
   
 }
 
-function _campuscms_profile_ucm_setup_filter_formats() {
+function _campuscms_profile_setup_filter_formats() {
   // Add text formats.
   $filtered_html_format = array(
     'format' => 'filtered_html',
@@ -98,7 +98,7 @@ function _campuscms_profile_ucm_setup_filter_formats() {
   return $filter_perms;
 }
 
-function _campuscms_profile_ucm_setup_menus() {
+function _campuscms_profile_setup_menus() {
   // Build left footer menu
   $left_footer_definition = array(
     'menu_name' => 'menu-left-footer',
@@ -127,7 +127,7 @@ function _campuscms_profile_ucm_setup_menus() {
   menu_save($right_footer_definition);
 }
 
-function _campuscms_profile_ucm_setup_blocks($themes) {
+function _campuscms_profile_setup_blocks($themes) {
   // Enable some standard blocks.
   $values = array(
     array(
@@ -218,7 +218,7 @@ function _campuscms_profile_ucm_setup_blocks($themes) {
   $query->execute();
 }
 
-function _campuscms_profile_ucm_setup_user_pictures() {
+function _campuscms_profile_setup_user_pictures() {
   // Enable user picture support and set the default to a square thumbnail option.
   variable_set('user_pictures', '1');
   variable_set('user_picture_dimensions', '1024x1024');
@@ -226,7 +226,7 @@ function _campuscms_profile_ucm_setup_user_pictures() {
   variable_set('user_picture_style', 'thumbnail');
 }
 
-function _campuscms_profile_ucm_setup_roles($filter_perms) {
+function _campuscms_profile_setup_roles($filter_perms) {
   // Set permissions for anonymous and authenticated roles.
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', $filter_perms['filtered_html']));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', $filter_perms['filtered_html']));
@@ -298,7 +298,7 @@ function _campuscms_profile_ucm_setup_roles($filter_perms) {
   user_role_grant_permissions($site_manager->rid, $site_manager_permissions);
 }
 
-function _campuscms_profile_ucm_setup_quickbar() {
+function _campuscms_profile_setup_quickbar() {
   // Enable faux machine names for roles.
   variable_set('quickbar_use_machine_names', 1);
   
@@ -428,7 +428,7 @@ function _campuscms_profile_ucm_setup_quickbar() {
   
 }
 
-function _campuscms_profile_ucm_setup_admin_theme($theme) {
+function _campuscms_profile_setup_admin_theme($theme) {
   // Enable the admin theme.
   db_update('system')
     ->fields(array('status' => 1))
