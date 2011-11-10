@@ -5,7 +5,7 @@
  *
  * Allows the profile to alter the site configuration form.
  */
-function cms_profile_ucm_form_install_configure_form_alter(&$form, $form_state) {
+function campuscms_profile_ucm_form_install_configure_form_alter(&$form, $form_state) {
   $form['site_information']['site_name']['#default_value'] = 'UCM Profile Test';
   $form['site_information']['site_mail']['#default_value'] = 'admin@example.com';
   $form['admin_account']['account']['name']['#default_value'] = 'admin';

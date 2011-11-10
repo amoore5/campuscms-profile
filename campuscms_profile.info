@@ -43,10 +43,10 @@ dependencies[] = wysiwyg
 dependencies[] = menu_admin_per_menu
 
 ; Feature Dependencies
-dependencies[] = cms_feature_admin_toolbar_admin
-dependencies[] = cms_feature_admin_toolbar_site_manager
-dependencies[] = cms_feature_admin_toolbar_content_editor
-dependencies[] = cms_feature_wysiwyg
-dependencies[] = cms_feature_page
-files[] = cms_profile_ucm.profile
+dependencies[] = campuscms_feature_admin_toolbar_admin
+dependencies[] = campuscms_feature_admin_toolbar_site_manager
+dependencies[] = campuscms_feature_admin_toolbar_content_editor
+dependencies[] = campuscms_feature_wysiwyg
+dependencies[] = campuscms_feature_page
+files[] = campuscms_profile.profile
 
