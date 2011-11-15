@@ -13,6 +13,8 @@ function campuscms_profile_install() {
   
   variable_set('theme_default', $themes['default']);
   
+  _campuscms_profile_setup_time_date();
+
   $filter_perms = _campuscms_profile_setup_filter_formats();
   
   _campuscms_profile_setup_menus();
@@ -27,6 +29,29 @@ function campuscms_profile_install() {
   
   _campuscms_profile_setup_admin_theme($themes['admin']);
   
+}
+
+function _campuscms_profile_setup_time_date() {
+  // Set default country to US
+  variable_set('site_default_country', 'US');
+  // First day of the week will be sunday
+  variable_set('date_first_day', '0');
+  // Timezone
+  variable_set('date_default_timezone', 'America/Los_Angeles');
+  // Users set their own timezone
+  variable_set('configurable_timezones', 1);
+  // Don't show a message to users if the timezone is empty
+  variable_set('empty_timezone_message', 0);
+  // Users default timezone
+  variable_set('user_default_timezone', '0');
+
+
+  // Date Long Format
+  variable_set('date_format_long', 'l, F j, Y - g:ia');
+  // Date Medium Format
+  variable_set('date_format_medium', 'D, m/d/Y - g:ia');
+  // Date Short Format
+  variable_set('date_format_short', 'm/d/Y - g:ia');
 }
 
 function _campuscms_profile_setup_filter_formats() {
