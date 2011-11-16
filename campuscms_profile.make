@@ -71,6 +71,13 @@ projects[campuscms_feature_page][download][url] = git://github.com/amoore5/campu
 projects[campuscms_feature_page][download][branch] = master
 projects[campuscms_feature_page][subdir] = custom/features
 
+projects[campuscms_feature_news][type] = module
+projects[campuscms_feature_news][version] = 1.0
+projects[campuscms_feature_news][download][type] = git
+projects[campuscms_feature_news][download][url] = git://github.com/amoore5/campuscms-feature-news.git
+projects[campuscms_feature_news][download][branch] = master
+projects[campuscms_feature_news][subdir] = custom/features
+
 ; Theme ========================================================================
 projects[zen] = 3.1
 projects[inception][type] = theme
