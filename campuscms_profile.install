@@ -45,15 +45,10 @@ function _campuscms_profile_setup_time_date() {
   // Users default timezone
   variable_set('user_default_timezone', '0');
 
-  // Insert custom format
-  db_insert('date_formats')
-    ->fields(array('format' => 'F j, Y - g:ia', 'type' => 'custom', 'locked' => 0))
-    ->execute();
-
   // Date Long Format
-  variable_set('date_format_long', 'l, F j, Y - g:ia');
+  variable_set('date_format_long', 'F j, Y - g:ia');
   // Date Medium Format
-  variable_set('date_format_medium', 'D, m/d/Y - g:ia');
+  variable_set('date_format_medium', 'M j, Y - g:ia');
   // Date Short Format
   variable_set('date_format_short', 'm/d/Y - g:ia');
 }
