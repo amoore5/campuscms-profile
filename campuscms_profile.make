@@ -4,30 +4,53 @@ api = 2
 ; Dependencies =================================================================
 
 projects[ctools] = 1.0-rc1
+
+; Patch for issue http://drupal.org/node/1241108
 projects[features] = 1.0-beta4
+projects[features][patch][] = "http://drupal.org/files/1241108-d7-1.patch"
+
 projects[quickbar][type] = module
 projects[quickbar][version] = 2.x-dev
 projects[quickbar][download][type] = git
 projects[quickbar][download][url] = http://git.drupal.org/project/quickbar.git
 projects[quickbar][download][branch] = 7.x-2.x
+
 projects[pathauto] = 1.0
+
 projects[devel] = 1.2
+
+; Patch for issue http://drupal.org/node/1309176
 projects[strongarm] = 2.0-beta4
 projects[strongarm][patch][] = "http://drupal.org/files/export-query-error-1309176-1.patch"
+
 projects[panels] = 3.0-alpha3
+
 projects[menu_block] = 2.2
+
 projects[menu_breadcrumb] = 1.3
+
 projects[custom_breadcrumbs] = 2.x-dev
+
 projects[redirect] = 1.0-beta3
+
 projects[cas] = 1.1
+
 projects[cas_attributes] = 1.0-beta2
+
 projects[realname] = 1.0-rc2
+
 projects[token] = 1.0-beta7
+
 projects[google_fonts] = 2.3
+
 projects[role_delegation] = 1.1
+
 projects[smtp] = 1.0-beta1
+
 projects[transliteration] = 3.x-dev
+
 projects[menu_admin_per_menu] = 1.0
+
 projects[nodeformcols][type] = module
 projects[nodeformcols][version] = 1.x-dev
 projects[nodeformcols][download][type] = git
