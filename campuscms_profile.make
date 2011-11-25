@@ -108,6 +108,13 @@ projects[campuscms_feature_webform][download][url] = git://github.com/amoore5/ca
 projects[campuscms_feature_webform][download][branch] = master
 projects[campuscms_feature_webform][subdir] = custom/features
 
+projects[campuscms_feature_calendar][type] = module
+projects[campuscms_feature_calendar][version] = 1.0
+projects[campuscms_feature_calendar][download][type] = git
+projects[campuscms_feature_calendar][download][url] = git://github.com/amoore5/campuscms-feature-calendar.git
+projects[campuscms_feature_calendar][download][branch] = master
+projects[campuscms_feature_calendar][subdir] = custom/features
+
 ; Theme ========================================================================
 projects[zen] = 3.1
 projects[inception][type] = theme
