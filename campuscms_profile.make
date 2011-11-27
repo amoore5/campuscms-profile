@@ -51,12 +51,6 @@ projects[transliteration] = 3.x-dev
 
 projects[menu_admin_per_menu] = 1.0
 
-projects[nodeformcols][type] = module
-projects[nodeformcols][version] = 1.x-dev
-projects[nodeformcols][download][type] = git
-projects[nodeformcols][download][url] = http://git.drupal.org/project/nodeformcols.git
-projects[nodeformcols][download][branch] = 7.x-1.x
-
 ; Features =====================================================================
 
 projects[campuscms_feature_admin_toolbar_admin][type] = module
