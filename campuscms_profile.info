@@ -19,6 +19,7 @@ dependencies[] = path
 dependencies[] = rdf
 
 ; Contrib Dependencies
+dependencies[] = campuscms_node_form_columns
 dependencies[] = ctools
 dependencies[] = custom_breadcrumbs
 dependencies[] = devel

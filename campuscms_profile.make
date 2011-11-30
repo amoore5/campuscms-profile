@@ -3,6 +3,13 @@ api = 2
 
 ; Dependencies =================================================================
 
+projects[campuscms_node_form_columns][type] = module
+projects[campuscms_node_form_columns][version] = 1.0
+projects[campuscms_node_form_columns][download][type] = git
+projects[campuscms_node_form_columns][download][url] = git://github.com/amoore5/campuscms-feature-admin-toolbar-admin.git
+projects[campuscms_node_form_columns][download][branch] = master
+projects[campuscms_node_form_columns][subdir] = custom
+
 projects[ctools] = 1.0-rc1
 
 projects[custom_breadcrumbs] = 2.x-dev
