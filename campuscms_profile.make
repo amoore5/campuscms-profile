@@ -79,12 +79,12 @@ projects[campuscms_feature_admin_toolbar_content_editor][download][url] = git://
 projects[campuscms_feature_admin_toolbar_content_editor][download][branch] = master
 projects[campuscms_feature_admin_toolbar_content_editor][subdir] = custom/features
 
-projects[campuscms_feature_calendar][type] = module
-projects[campuscms_feature_calendar][version] = 1.0
-projects[campuscms_feature_calendar][download][type] = git
-projects[campuscms_feature_calendar][download][url] = git://github.com/amoore5/campuscms-feature-calendar.git
-projects[campuscms_feature_calendar][download][branch] = master
-projects[campuscms_feature_calendar][subdir] = custom/features
+projects[campuscms_feature_events][type] = module
+projects[campuscms_feature_events][version] = 1.0
+projects[campuscms_feature_events][download][type] = git
+projects[campuscms_feature_events][download][url] = git://github.com/amoore5/campuscms-feature-events.git
+projects[campuscms_feature_events][download][branch] = master
+projects[campuscms_feature_events][subdir] = custom/features
 
 projects[campuscms_feature_news][type] = module
 projects[campuscms_feature_news][version] = 1.0
