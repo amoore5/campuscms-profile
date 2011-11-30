@@ -33,10 +33,6 @@ projects[custom_breadcrumbs] = 2.x-dev
 
 projects[redirect] = 1.0-beta3
 
-projects[cas] = 1.1
-
-projects[cas_attributes] = 1.0-beta2
-
 projects[realname] = 1.0-rc2
 
 projects[token] = 1.0-beta7
