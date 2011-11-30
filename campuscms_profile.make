@@ -6,7 +6,7 @@ api = 2
 projects[campuscms_node_form_columns][type] = module
 projects[campuscms_node_form_columns][version] = 1.0
 projects[campuscms_node_form_columns][download][type] = git
-projects[campuscms_node_form_columns][download][url] = git://github.com/amoore5/campuscms-feature-admin-toolbar-admin.git
+projects[campuscms_node_form_columns][download][url] = git://github.com/amoore5/campuscms-node-form-columns.git
 projects[campuscms_node_form_columns][download][branch] = master
 projects[campuscms_node_form_columns][subdir] = custom
 
