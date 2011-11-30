@@ -41,7 +41,7 @@ projects[realname] = 1.0-rc2
 
 projects[token] = 1.0-beta7
 
-projects[google_fonts] = 2.3
+projects[fontyourface] = 1.6
 
 projects[role_delegation] = 1.1
 
