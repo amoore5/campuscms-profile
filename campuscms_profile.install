@@ -80,7 +80,7 @@ function _campuscms_profile_setup_filter_formats() {
         'weight' => 1,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <ul> <ol> <li> <dl> <dt> <dd> <img> <table> <tbody> <th> <tr> <td> <div>',
+          'allowed_html' => '<h2> <h3> <h4> <a> <em> <strong> <cite> <blockquote> <ul> <ol> <li> <dl> <dt> <dd> <img> <table> <tbody> <th> <tr> <td> <div>',
         ),
       ),
       // Line break filter.
