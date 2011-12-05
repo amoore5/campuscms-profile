@@ -107,6 +107,13 @@ projects[campuscms_feature_page][download][url] = git://github.com/amoore5/campu
 projects[campuscms_feature_page][download][branch] = master
 projects[campuscms_feature_page][subdir] = custom/features
 
+projects[campuscms_feature_search][type] = module
+projects[campuscms_feature_search][version] = 1.0
+projects[campuscms_feature_search][download][type] = git
+projects[campuscms_feature_search][download][url] = git://github.com/amoore5/campuscms-feature-search.git
+projects[campuscms_feature_search][download][branch] = master
+projects[campuscms_feature_search][subdir] = custom/features
+
 projects[campuscms_feature_webform][type] = module
 projects[campuscms_feature_webform][version] = 1.0
 projects[campuscms_feature_webform][download][type] = git
