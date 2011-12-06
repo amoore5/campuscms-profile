@@ -86,6 +86,13 @@ projects[campuscms_feature_contact][download][url] = git://github.com/amoore5/ca
 projects[campuscms_feature_contact][download][branch] = master
 projects[campuscms_feature_contact][subdir] = custom/features
 
+projects[campuscms_feature_default_content][type] = module
+projects[campuscms_feature_default_content][version] = 1.0
+projects[campuscms_feature_default_content][download][type] = git
+projects[campuscms_feature_default_content][download][url] = git://github.com/amoore5/campuscms-feature-default-content.git
+projects[campuscms_feature_default_content][download][branch] = master
+projects[campuscms_feature_default_content][subdir] = custom/features
+
 projects[campuscms_feature_events][type] = module
 projects[campuscms_feature_events][version] = 1.0
 projects[campuscms_feature_events][download][type] = git
