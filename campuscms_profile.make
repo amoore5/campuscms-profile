@@ -8,7 +8,7 @@ projects[campuscms_node_form_columns][version] = 1.0
 projects[campuscms_node_form_columns][download][type] = git
 projects[campuscms_node_form_columns][download][url] = git://github.com/amoore5/campuscms-node-form-columns.git
 projects[campuscms_node_form_columns][download][branch] = master
-projects[campuscms_node_form_columns][subdir] = custom
+projects[campuscms_node_form_columns][subdir] = custom/modules
 
 projects[ctools] = 1.0-rc1
 
@@ -27,6 +27,8 @@ projects[menu_admin_per_menu] = 1.0
 projects[menu_block] = 2.2
 
 projects[menu_breadcrumb] = 1.3
+
+projects[module_filter] = 1.6
 
 projects[panels] = 3.0-alpha3
 
@@ -53,6 +55,13 @@ projects[strongarm][patch][] = "http://drupal.org/files/export-query-error-13091
 projects[token] = 1.0-beta7
 
 projects[transliteration] = 3.x-dev
+
+projects[ucm_footer_blocks][type] = module
+projects[ucm_footer_blocks][version] = 1.0
+projects[ucm_footer_blocks][download][type] = git
+projects[ucm_footer_blocks][download][url] = git://github.com/amoore5/ucm-footer-blocks.git
+projects[ucm_footer_blocks][download][branch] = master
+projects[ucm_footer_blocks][subdir] = custom/modules
 
 projects[views] = 3.0-rc3
 
