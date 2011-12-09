@@ -29,7 +29,6 @@ dependencies[] = menu_admin_per_menu
 dependencies[] = menu_block
 dependencies[] = menu_breadcrumb
 dependencies[] = module_filter
-dependencies[] = panels
 dependencies[] = pathauto
 dependencies[] = quickbar
 dependencies[] = quickbar_extras

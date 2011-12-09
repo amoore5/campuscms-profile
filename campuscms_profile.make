@@ -30,8 +30,6 @@ projects[menu_breadcrumb] = 1.3
 
 projects[module_filter] = 1.6
 
-projects[panels] = 3.0-alpha3
-
 projects[pathauto] = 1.0
 
 projects[quickbar][type] = module
