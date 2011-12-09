@@ -40,7 +40,7 @@ projects[quickbar][download][branch] = 7.x-2.x
 
 projects[realname] = 1.0-rc2
 
-projects[redirect] = 1.0-beta3
+projects[redirect] = 1.0-beta4
 
 projects[role_delegation] = 1.1
 
