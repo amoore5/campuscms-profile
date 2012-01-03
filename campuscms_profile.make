@@ -17,7 +17,7 @@ projects[custom_breadcrumbs] = 2.x-dev
 projects[devel] = 1.2
 
 ; Patch for issue http://drupal.org/node/1241108
-projects[features] = 1.0-beta4
+projects[features][version] = 1.0-beta5
 projects[features][patch][] = "http://drupal.org/files/1241108-d7-1.patch"
 
 projects[fontyourface] = 1.6
@@ -46,9 +46,7 @@ projects[role_delegation] = 1.1
 
 projects[smtp] = 1.0-beta1
 
-; Patch for issue http://drupal.org/node/1309176
-projects[strongarm] = 2.0-beta4
-projects[strongarm][patch][] = "http://drupal.org/files/export-query-error-1309176-1.patch"
+projects[strongarm] = 2.0-beta5
 
 projects[token] = 1.0-beta7
 
@@ -61,7 +59,7 @@ projects[ucm_footer_blocks][download][url] = git://github.com/amoore5/ucm-footer
 projects[ucm_footer_blocks][download][branch] = master
 projects[ucm_footer_blocks][subdir] = custom/modules
 
-projects[views] = 3.0-rc3
+projects[views] = 3.0
 
 ; Features =====================================================================
 
