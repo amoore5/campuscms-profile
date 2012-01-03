@@ -10,25 +10,25 @@ function campuscms_profile_install() {
     'default' => 'inception',
     'admin' => 'seven',
   );
-  
+
   variable_set('theme_default', $themes['default']);
-  
+
   _campuscms_profile_setup_time_date();
 
   $filter_perms = _campuscms_profile_setup_filter_formats();
-  
+
   _campuscms_profile_setup_menus();
-  
+
   _campuscms_profile_setup_blocks($themes);
 
   _campuscms_profile_setup_user_pictures();
-  
+
   _campuscms_profile_setup_roles($filter_perms);
-  
+
   _campuscms_profile_setup_quickbar();
-  
+
   _campuscms_profile_setup_admin_theme($themes['admin']);
-  
+
 }
 
 function _campuscms_profile_setup_time_date() {
@@ -49,7 +49,7 @@ function _campuscms_profile_setup_time_date() {
   db_insert('date_formats')
     ->fields(array('format' => 'F j, Y - g:ia', 'type' => 'custom', 'locked' => 0))
     ->execute();
-    
+
   // Insert custom format: Nov 25, 2011
   db_insert('date_formats')
     ->fields(array('format' => 'M. j, Y - g:ia', 'type' => 'custom', 'locked' => 0))
@@ -122,7 +122,7 @@ function _campuscms_profile_setup_filter_formats() {
   );
   $full_html_format = (object) $full_html_format;
   filter_format_save($full_html_format);
-  
+
   // Enable default permissions for system roles.
   $filter_perms = array(
     'filtered_html' => filter_permission_name($filtered_html_format),
@@ -139,25 +139,25 @@ function _campuscms_profile_setup_menus() {
     'title' => 'Left Footer',
     'description' => 'This is the left footer menu.',
   );
-  
+
   menu_save($left_footer_definition);
-  
+
   // Build center footer menu
   $center_footer_definition = array(
     'menu_name' => 'menu-center-footer',
     'title' => 'Center Footer',
     'description' => 'This is the center footer menu.',
   );
-  
+
   menu_save($center_footer_definition);
-  
+
   // Build right footer menu
   $right_footer_definition = array(
     'menu_name' => 'menu-right-footer',
     'title' => 'Right Footer',
     'description' => 'This is the right footer menu.',
   );
-  
+
   menu_save($right_footer_definition);
 }
 
@@ -264,7 +264,7 @@ function _campuscms_profile_setup_roles($filter_perms) {
   // Set permissions for anonymous and authenticated roles.
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', $filter_perms['filtered_html']));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', $filter_perms['filtered_html']));
-  
+
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'administrator';
@@ -278,20 +278,19 @@ function _campuscms_profile_setup_roles($filter_perms) {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
-    
+
   // Create a content editor role
   $content_editor = new stdClass();
   $content_editor->name = 'content editor';
   $content_editor->weight = 2;
   user_role_save($content_editor);
-  
+
   $content_editor_permissions = array(
     $filter_perms['filtered_html'],
     'administer nodes',
     'access content overview',
     'view revisions',
     'view own unpublished content',
-    'access overlay',
     'create url aliases',
     'view the administration theme',
     'administer main-menu menu items',
@@ -299,19 +298,18 @@ function _campuscms_profile_setup_roles($filter_perms) {
     'administer menu-right-footer menu items',
   );
   user_role_grant_permissions($content_editor->rid, $content_editor_permissions);
-  
+
   // Create a site manager role
   $site_manager = new stdClass();
   $site_manager->name = 'site manager';
   $site_manager->weight = 3;
   user_role_save($site_manager);
-  
+
   $site_manager_permissions = array(
     $filter_perms['filtered_html'],
     'administer blocks',
     'access contextual links',
     'view own unpublished content',
-    'access overlay',
     'administer nodes',
     'access content overview',
     'view revisions',
@@ -335,7 +333,7 @@ function _campuscms_profile_setup_roles($filter_perms) {
 function _campuscms_profile_setup_quickbar() {
   // Enable faux machine names for roles.
   variable_set('quickbar_use_machine_names', 1);
-  
+
   $quickbar_settings = array(
     'iconset' => 'quickbar',
     'sticky' => 0,
@@ -343,49 +341,49 @@ function _campuscms_profile_setup_quickbar() {
     'secondary_menu_visibility' => 0,
     'nofollow' => 0,
   );
-  
+
   $quickbar_extras_settings = array(
     'show_username' => 1,
     'show_username_prefix' => 'Hello, ',
     'show_username_suffix' => '',
     'show_username_link' => 1,
   );
-  
+
   $home_link = array(
     'link_path' => drupal_get_normal_path('<front>'),
     'link_title' => 'Home',
   );
-  
+
   $add_content_link = array(
     'link_path' => drupal_get_normal_path('node/add'),
     'link_title' => 'Add Content',
   );
-  
+
   $manage_content_link = array(
     'link_path' => drupal_get_normal_path('admin/content'),
     'link_title' => 'Manage Content',
   );
-  
+
   $menus_link = array(
     'link_path' => drupal_get_normal_path('admin/structure/menu'),
     'link_title' => 'Menus',
   );
-  
+
   $users_link = array(
     'link_path' => drupal_get_normal_path('admin/people'),
     'link_title' => 'Users',
   );
-  
+
   $site_configuration_link = array(
     'link_path' => drupal_get_normal_path('admin/config'),
     'link_title' => 'Site Configuration',
   );
-  
+
   $logout_link = array(
     'link_path' => drupal_get_normal_path('caslogout'),
     'link_title' => 'Logout',
-  ); 
-  
+  );
+
   /**
    * Build administrator toolbar menu
    */
@@ -394,29 +392,29 @@ function _campuscms_profile_setup_quickbar() {
     'title' => 'Toolbar - Administrator',
     'description' => 'This is the administration toolbar for adminstrators.',
   );
-  
+
   menu_save($administrator_menu_definition);
-  
+
   // Add Home Menu Item
   $administrator_home_link = $home_link;
   $administrator_home_link['menu_name'] = 'menu-toolbar-administrator';
   menu_link_save($administrator_home_link);
-  
+
   // Add Logout Menu Item
   $administrator_logout_link = $logout_link;
   $administrator_logout_link['menu_name'] = 'menu-toolbar-administrator';
   $administrator_logout_mlid = menu_link_save($administrator_logout_link);
-  
+
   // Add administrator menu settings for quickbar.
   $menus['administrator'] = 'menu-toolbar-administrator';
   $weights['administrator'] = -10;
-  
+
   variable_set('quickbar_settings_administrator', $quickbar_settings);
-  
+
   $administrator_quickbar_extras_settings = $quickbar_extras_settings;
   $administrator_quickbar_extras_settings['menu']['mlid_' . $administrator_logout_mlid] = 'right';
   variable_set('quickbar_extras_settings_administrator', $administrator_quickbar_extras_settings);
-  
+
   /**
    * Build site manager toolbar menu
    */
@@ -425,13 +423,13 @@ function _campuscms_profile_setup_quickbar() {
     'title' => 'Toolbar - Site Manager',
     'description' => 'This is the administration toolbar for site managers.',
   );
-  
+
   menu_save($site_manager_menu_definition);
-  
+
   // Add site manager settings for quickbar
   $menus['site-manager'] = 'menu-toolbar-site-manager';
   $weights['site-manager'] = -9;
-  
+
   /**
    * Build content editor toolbar menu
    */
@@ -440,26 +438,26 @@ function _campuscms_profile_setup_quickbar() {
     'title' => 'Toolbar - Content Editor',
     'description' => 'This is the administration toolbar for content editors.',
   );
-  
+
   menu_save($content_editor_menu_definition);
-  
+
   // Add content editor settings for quickbar
   $menus['content-editor'] = 'menu-toolbar-content-editor';
   $weights['content-editor'] = -8;
-  
+
   menu_cache_clear_all();
-  
+
   // Add the authenticated user settings for quickbar
   $menus['authenticated-user'] = 0;
   $weights['authenticated-user'] = 0;
-  
+
   // Add the anonymous user settings for quickbar
   $menus['anonymous-user'] = 0;
   $weights['anonymous-user'] = 1;
-  
+
   variable_set('quickbar_role_menus', $menus);
   variable_set('quickbar_role_weights', $weights);
-  
+
 }
 
 function _campuscms_profile_setup_admin_theme($theme) {
