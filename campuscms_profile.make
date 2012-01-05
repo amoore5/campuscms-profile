@@ -82,6 +82,13 @@ projects[campuscms_feature_admin_toolbar_content_editor][download][url] = git://
 projects[campuscms_feature_admin_toolbar_content_editor][download][branch] = master
 projects[campuscms_feature_admin_toolbar_content_editor][subdir] = custom/features
 
+projects[campuscms_feature_cas][type] = module
+projects[campuscms_feature_cas][version] = 1.0
+projects[campuscms_feature_cas][download][type] = git
+projects[campuscms_feature_cas][download][url] = git://github.com/amoore5/campuscms-feature-cas.git
+projects[campuscms_feature_cas][download][branch] = master
+projects[campuscms_feature_cas][subdir] = custom/features
+
 projects[campuscms_feature_contact][type] = module
 projects[campuscms_feature_contact][version] = 1.0
 projects[campuscms_feature_contact][download][type] = git
