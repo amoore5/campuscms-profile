@@ -34,7 +34,6 @@ dependencies[] = quickbar_extras
 dependencies[] = realname
 dependencies[] = redirect
 dependencies[] = role_delegation
-dependencies[] = smtp
 dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = transliteration
