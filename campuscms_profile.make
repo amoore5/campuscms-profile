@@ -44,8 +44,6 @@ projects[redirect] = 1.0-beta4
 
 projects[role_delegation] = 1.1
 
-projects[smtp] = 1.0-beta1
-
 projects[strongarm] = 2.0-beta5
 
 projects[token] = 1.0-beta7
