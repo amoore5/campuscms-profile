@@ -89,6 +89,13 @@ projects[campuscms_feature_cas][download][url] = git://github.com/amoore5/campus
 projects[campuscms_feature_cas][download][branch] = master
 projects[campuscms_feature_cas][subdir] = custom/features
 
+projects[ucm_campuscms_cas_defaults][type] = module
+projects[ucm_campuscms_cas_defaults][version] = 1.0
+projects[ucm_campuscms_cas_defaults][download][type] = git
+projects[ucm_campuscms_cas_defaults][download][url] = git://github.com/amoore5/ucm-campuscms-cas-defaults.git
+projects[ucm_campuscms_cas_defaults][download][branch] = master
+projects[ucm_campuscms_cas_defaults][subdir] = custom/features
+
 projects[campuscms_feature_contact][type] = module
 projects[campuscms_feature_contact][version] = 1.0
 projects[campuscms_feature_contact][download][type] = git

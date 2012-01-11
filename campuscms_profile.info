@@ -44,6 +44,8 @@ dependencies[] = views
 dependencies[] = campuscms_feature_admin_toolbar_admin
 dependencies[] = campuscms_feature_admin_toolbar_site_manager
 dependencies[] = campuscms_feature_admin_toolbar_content_editor
+dependencies[] = campsucms_feature_cas
+dependencies[] = ucm_campuscms_cas_defaults
 dependencies[] = campuscms_feature_page
 dependencies[] = campuscms_feature_wysiwyg
 
