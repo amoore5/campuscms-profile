@@ -47,6 +47,7 @@ dependencies[] = campuscms_feature_admin_toolbar_content_editor
 dependencies[] = campuscms_feature_cas
 dependencies[] = ucm_campuscms_cas_defaults
 dependencies[] = campuscms_feature_page
+dependencies[] = campuscms_feature_user_profile
 dependencies[] = campuscms_feature_wysiwyg
 
 files[] = campuscms_profile.profile

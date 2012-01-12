@@ -138,6 +138,13 @@ projects[campuscms_feature_search][download][url] = git://github.com/amoore5/cam
 projects[campuscms_feature_search][download][branch] = master
 projects[campuscms_feature_search][subdir] = custom/features
 
+projects[campuscms_feature_user_profile][type] = module
+projects[campuscms_feature_user_profile][version] = 1.0
+projects[campuscms_feature_user_profile][download][type] = git
+projects[campuscms_feature_user_profile][download][url] = git://github.com/amoore5/campuscms-feature-user-profile.git
+projects[campuscms_feature_user_profile][download][branch] = master
+projects[campuscms_feature_user_profile][subdir] = custom/features
+
 projects[campuscms_feature_webform][type] = module
 projects[campuscms_feature_webform][version] = 1.0
 projects[campuscms_feature_webform][download][type] = git
