@@ -159,6 +159,13 @@ projects[campuscms_feature_wysiwyg][download][url] = git://github.com/amoore5/ca
 projects[campuscms_feature_wysiwyg][download][branch] = master
 projects[campuscms_feature_wysiwyg][subdir] = custom/features
 
+projects[ucm_webform_lists][type] = module
+projects[ucm_webform_lists][version] = 1.0
+projects[ucm_webform_lists][download][type] = git
+projects[ucm_webform_lists][download][url] = git://github.com/amoore5/ucm-webform-lists.git
+projects[ucm_webform_lists][download][branch] = master
+projects[ucm_webform_lists][subdir] = custom/features
+
 ; Theme ========================================================================
 projects[zen] = 3.1
 projects[inception][type] = theme
