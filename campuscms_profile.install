@@ -7,11 +7,11 @@
  */
 function campuscms_profile_install() {
   $themes = array(
-    'default' => 'inception',
-    'admin' => 'seven',
+    'theme_default' => 'inception',
+    'admin_theme' => 'seven',
   );
 
-  variable_set('theme_default', $themes['default']);
+  _campuscms_profile_setup_themes($themes);
 
   _campuscms_profile_setup_time_date();
 
@@ -27,9 +27,23 @@ function campuscms_profile_install() {
 
   _campuscms_profile_setup_quickbar();
 
-  _campuscms_profile_setup_admin_theme($themes['admin']);
-
   _campuscms_profile_setup_custom_breadcrumbs();
+}
+
+function _campuscms_profile_setup_themes($themes) {
+  theme_enable($themes);
+
+  foreach ($enable as $var => $theme) {
+    if (!is_numeric($var)) {
+      variable_set($var, $theme);
+    }
+  }
+
+  // Disable bartik
+  theme_disable(array('bartik'));
+
+  // Make the admin theme the default for creating content.
+  variable_set('node_admin_theme', '1');
 }
 
 function _campuscms_profile_setup_time_date() {
@@ -168,7 +182,7 @@ function _campuscms_profile_setup_blocks($themes) {
     array(
       'module' => 'system',
       'delta' => 'main',
-      'theme' => $themes['default'],
+      'theme' => $themes['theme_default'],
       'status' => 1,
       'weight' => 0,
       'region' => 'content',
@@ -178,7 +192,7 @@ function _campuscms_profile_setup_blocks($themes) {
     array(
       'module' => 'node',
       'delta' => 'recent',
-      'theme' => $themes['admin'],
+      'theme' => $themes['admin_theme'],
       'status' => 1,
       'weight' => 10,
       'region' => 'dashboard_main',
@@ -188,7 +202,7 @@ function _campuscms_profile_setup_blocks($themes) {
     array(
       'module' => 'user',
       'delta' => 'login',
-      'theme' => $themes['default'],
+      'theme' => $themes['theme_default'],
       'status' => 1,
       'weight' => 0,
       'region' => 'sidebar_first',
@@ -198,7 +212,7 @@ function _campuscms_profile_setup_blocks($themes) {
     array(
       'module' => 'system',
       'delta' => 'help',
-      'theme' => $themes['default'],
+      'theme' => $themes['theme_default'],
       'status' => 1,
       'weight' => 0,
       'region' => 'help',
@@ -208,7 +222,7 @@ function _campuscms_profile_setup_blocks($themes) {
     array(
       'module' => 'system',
       'delta' => 'main',
-      'theme' => $themes['admin'],
+      'theme' => $themes['admin_theme'],
       'status' => 1,
       'weight' => 0,
       'region' => 'content',
@@ -218,7 +232,7 @@ function _campuscms_profile_setup_blocks($themes) {
     array(
       'module' => 'system',
       'delta' => 'help',
-      'theme' => $themes['admin'],
+      'theme' => $themes['admin_theme'],
       'status' => 1,
       'weight' => 0,
       'region' => 'help',
@@ -228,7 +242,7 @@ function _campuscms_profile_setup_blocks($themes) {
     array(
       'module' => 'user',
       'delta' => 'login',
-      'theme' => $themes['admin'],
+      'theme' => $themes['admin_theme'],
       'status' => 1,
       'weight' => 10,
       'region' => 'content',
@@ -238,7 +252,7 @@ function _campuscms_profile_setup_blocks($themes) {
     array(
       'module' => 'user',
       'delta' => 'new',
-      'theme' => $themes['admin'],
+      'theme' => $themes['admin_theme'],
       'status' => 1,
       'weight' => 0,
       'region' => 'dashboard_sidebar',
@@ -459,17 +473,6 @@ function _campuscms_profile_setup_quickbar() {
   variable_set('quickbar_role_menus', $menus);
   variable_set('quickbar_role_weights', $weights);
 
-}
-
-function _campuscms_profile_setup_admin_theme($theme) {
-  // Enable the admin theme.
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', $theme)
-    ->execute();
-  variable_set('admin_theme', $theme);
-  variable_set('node_admin_theme', '1');
 }
 
 function _campuscms_profile_setup_custom_breadcrumbs() {
