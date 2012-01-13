@@ -30,7 +30,9 @@ projects[menu_breadcrumb] = 1.3
 
 projects[module_filter] = 1.6
 
-projects[pathauto] = 1.0
+projects[pathauto][version] = 1.x-dev
+projects[pathauto][patch][1046972-pathauto-array-join-path-token_1.patch] = http://drupal.org/files/1046972-pathauto-array-join-path-token_1.patch
+
 
 projects[quickbar][type] = module
 projects[quickbar][version] = 2.x-dev
