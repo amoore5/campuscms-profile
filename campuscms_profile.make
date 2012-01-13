@@ -46,7 +46,7 @@ projects[role_delegation] = 1.1
 
 projects[strongarm] = 2.0-beta5
 
-projects[token] = 1.0-beta7
+projects[token] = 1.x-dev
 
 projects[transliteration] = 3.x-dev
 
