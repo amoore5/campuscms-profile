@@ -19,6 +19,7 @@ dependencies[] = rdf
 
 ; Contrib Dependencies
 dependencies[] = campuscms_node_form_columns
+dependencies[] = campuscms_secondary_menus
 dependencies[] = ctools
 dependencies[] = custom_breadcrumbs
 dependencies[] = devel
