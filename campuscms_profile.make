@@ -24,10 +24,10 @@ projects[custom_breadcrumbs] = 2.x-dev
 projects[devel] = 1.2
 
 ; Patch for issue http://drupal.org/node/1241108
-projects[features][version] = 1.0-beta5
+projects[features][version] = 1.0-beta6
 projects[features][patch][] = "http://drupal.org/files/1241108-d7-1.patch"
 
-projects[fontyourface] = 1.6
+projects[fontyourface] = 2.0
 
 projects[menu_admin_per_menu] = 1.0
 
@@ -37,7 +37,7 @@ projects[menu_breadcrumb] = 1.3
 
 projects[module_filter] = 1.6
 
-projects[pathauto][version] = 1.x-dev
+projects[pathauto][version] = 1.0
 projects[pathauto][patch][1046972-pathauto-array-join-path-token_1.patch] = http://drupal.org/files/1046972-pathauto-array-join-path-token_1.patch
 
 
