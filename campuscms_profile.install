@@ -29,6 +29,7 @@ function campuscms_profile_install() {
 
   _campuscms_profile_setup_admin_theme($themes['admin']);
 
+  _campuscms_profile_setup_custom_breadcrumbs();
 }
 
 function _campuscms_profile_setup_time_date() {
@@ -469,4 +470,33 @@ function _campuscms_profile_setup_admin_theme($theme) {
     ->execute();
   variable_set('admin_theme', $theme);
   variable_set('node_admin_theme', '1');
+}
+
+function _campuscms_profile_setup_custom_breadcrumbs() {
+  /**
+   * Basic Settings
+   */
+  variable_set('custom_breadcrumbs_home', 'Home');
+  // Page Title
+  variable_set('custom_breadcrumbs_append_page_title', 1);
+  variable_set('custom_breadcrumbs_append_page_title_no_link', 1);
+
+  // Menu Structure
+  variable_set('custom_breadcrumbs_set_menu_breadcrumb', 1);
+  variable_set('custom_breadcrumbs_menu_list', array('main-menu' => 'main-menu'));
+  /**
+   * Advanced Settings
+   */
+  variable_set('custom_breadcrumbs_set_global_home_breadcrumb', 0);
+  variable_set('custom_breadcrumbs_use_php_in_titles', 0);
+  variable_set('custom_breadcrumbs_force_active_trail', 0);
+  // Excluded Paths
+  variable_set('custom_breadcrumbs_use_exclude_list', 0);
+  variable_set('custom_breadcrumbs_exclude_list', '');
+  // HTML Element Identifiers
+  variable_set('custom_breadcrumbs_home_id', 0);
+  variable_set('custom_breadcrumbs_parts_class', 0);
+  variable_set('custom_breadcrumbs_even_odd_class', 0);
+  variable_set('custom_breadcrumbs_type_class', 0);
+  variable_set('custom_breadcrumbs_append_bid_class', 0);
 }
