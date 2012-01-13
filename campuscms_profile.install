@@ -33,7 +33,7 @@ function campuscms_profile_install() {
 function _campuscms_profile_setup_themes($themes) {
   theme_enable($themes);
 
-  foreach ($enable as $var => $theme) {
+  foreach ($themes as $var => $theme) {
     if (!is_numeric($var)) {
       variable_set($var, $theme);
     }
