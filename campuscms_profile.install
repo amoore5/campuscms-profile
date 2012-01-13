@@ -261,7 +261,7 @@ function _campuscms_profile_setup_blocks($themes) {
     ),
     array(
       'module' => 'menu_block',
-      'delta' => 1,
+      'delta' => 'campuscms_secondary_menus-1',
       'theme' => $themes['theme_default'],
       'status' => 1,
       'weight' => 0,
