@@ -73,7 +73,7 @@ projects[ucm_webform_lists][download][url] = git://github.com/amoore5/ucm-webfor
 projects[ucm_webform_lists][download][branch] = master
 projects[ucm_webform_lists][subdir] = custom/modules
 
-projects[views] = 3.0
+projects[views] = 3.1
 
 ; Features =====================================================================
 
