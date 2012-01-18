@@ -60,7 +60,7 @@ projects[strongarm] = 2.0-beta5
 ; 1.x Last commit December 14, 2011
 projects[token][type] = module
 projects[token][download][type] = git
-projects[token][download][url] = http://git.drupal.org/project/quickbar.git
+projects[token][download][url] = http://git.drupal.org/project/token.git
 projects[token][download][revision] = 80c08b78c469a1ba73e9d2b8efee5825854ce127
 
 ; 3.x Last commit December 19, 2011
