@@ -66,7 +66,7 @@ projects[token][download][revision] = 80c08b78c469a1ba73e9d2b8efee5825854ce127
 ; 3.x Last commit December 19, 2011
 projects[transliteration][type] = module
 projects[transliteration][download][type] = git
-projects[transliteration][download][url] = http://drupal.org/project/transliteration.git
+projects[transliteration][download][url] = http://git.drupal.org/project/transliteration.git
 projects[transliteration][download][revision] = 34d41e01385a5ae5f92d96ff5ee42fc7acbfb41a
 
 projects[ucm_footer_blocks][type] = module
