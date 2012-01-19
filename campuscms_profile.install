@@ -372,6 +372,7 @@ function _campuscms_profile_setup_roles($filter_perms) {
     'assign site manager role',
     'administer site configuration',
     'administer themes',
+    'access administration pages',
     'view the administration theme',
     'access site reports',
     'administer users',
