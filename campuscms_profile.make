@@ -22,12 +22,12 @@ projects[custom_breadcrumbs][type] = module
 projects[custom_breadcrumbs][download][type] = git
 projects[custom_breadcrumbs][download][url] = http://git.drupal.org/project/custom_breadcrumbs.git
 projects[custom_breadcrumbs][download][revision] = 0b50c14b01cf4157ea13313367e1f82ee435b08b
+projects[custom_breadcrumbs][patch][1414674] = http://drupal.org/files/1414674-d7-1.patch
 
 projects[devel] = 1.2
 
-; Patch for issue http://drupal.org/node/1241108
 projects[features][version] = 1.0-beta6
-projects[features][patch][] = "http://drupal.org/files/1241108-d7-1.patch"
+projects[features][patch][1241108] = "http://drupal.org/files/1241108-d7-1.patch"
 
 projects[fontyourface] = 2.0
 
@@ -35,13 +35,10 @@ projects[menu_admin_per_menu] = 1.0
 
 projects[menu_block] = 2.2
 
-projects[menu_breadcrumb] = 1.3
-
 projects[module_filter] = 1.6
 
-; Patch for issue http://drupal.org/node/1046972
 projects[pathauto][version] = 1.0
-projects[pathauto][patch][1046972-pathauto-array-join-path-token_1.patch] = http://drupal.org/files/1046972-pathauto-array-join-path-token_1.patch
+projects[pathauto][patch][1046972] = http://drupal.org/files/1046972-pathauto-array-join-path-token_1.patch
 
 ; 2.x Last commit January 11, 2012
 projects[quickbar][type] = module

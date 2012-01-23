@@ -519,8 +519,8 @@ function _campuscms_profile_setup_custom_breadcrumbs() {
    */
   variable_set('custom_breadcrumbs_home', 'Home');
   // Page Title
-  variable_set('custom_breadcrumbs_append_page_title', 1);
-  variable_set('custom_breadcrumbs_append_page_title_no_link', 1);
+  variable_set('custom_breadcrumbs_append_page_title', 0);
+  variable_set('custom_breadcrumbs_append_page_title_no_link', 0);
 
   // Menu Structure
   variable_set('custom_breadcrumbs_set_menu_breadcrumb', 1);
