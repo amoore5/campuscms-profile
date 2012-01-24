@@ -28,6 +28,8 @@ function campuscms_profile_install() {
   _campuscms_profile_setup_quickbar();
 
   _campuscms_profile_setup_custom_breadcrumbs();
+
+  _campuscms_profile_setup_home_page();
 }
 
 function _campuscms_profile_setup_themes($themes) {
@@ -540,4 +542,19 @@ function _campuscms_profile_setup_custom_breadcrumbs() {
   variable_set('custom_breadcrumbs_even_odd_class', 0);
   variable_set('custom_breadcrumbs_type_class', 0);
   variable_set('custom_breadcrumbs_append_bid_class', 0);
+}
+
+function _campuscms_profile_setup_home_page() {
+  $node = new stdClass();
+  $node->type = "page";
+  $node->title = "Home";
+  $node->language = LANGUAGE_NONE;
+  $node->uid = 1;
+  node_object_prepare($node);
+
+  $node->field_page_body[$node->language][0]['value'] = 'This is your homepage. If you are logged in you can click the edit link at the top to edit what is said here.';
+  $node->field_page_body[$node->language][0]['format'] = 'filtered_html';
+
+  $node = node_submit($node);
+  node_save($node);
 }
