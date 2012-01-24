@@ -557,4 +557,6 @@ function _campuscms_profile_setup_home_page() {
 
   $node = node_submit($node);
   node_save($node);
+
+  variable_set('site_frontpage', 'node/' . $node->nid);
 }
