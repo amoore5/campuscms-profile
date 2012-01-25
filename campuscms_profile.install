@@ -545,7 +545,7 @@ function _campuscms_profile_setup_custom_breadcrumbs() {
 }
 
 function _campuscms_profile_setup_home_page() {
-  node_types_rebuild();
+  features_revert(array('campuscms_feature_page' => array('field')));
   $node = new stdClass();
   $node->type = "page";
   $node->title = "Home";
