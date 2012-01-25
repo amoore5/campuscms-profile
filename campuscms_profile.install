@@ -545,7 +545,10 @@ function _campuscms_profile_setup_custom_breadcrumbs() {
 }
 
 function _campuscms_profile_setup_home_page() {
+  // Need to revert so I can use the field_page_body field.
   features_revert(array('campuscms_feature_page' => array('field')));
+
+  // Create the home page node.
   $node = new stdClass();
   $node->type = "page";
   $node->title = "Home";
@@ -561,5 +564,6 @@ function _campuscms_profile_setup_home_page() {
   $node = node_submit($node);
   node_save($node);
 
+  // Save the front page.
   variable_set('site_frontpage', 'node/' . $node->nid);
 }

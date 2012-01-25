@@ -37,8 +37,11 @@ projects[menu_block] = 2.2
 
 projects[module_filter] = 1.6
 
-projects[pathauto][version] = 1.0
-projects[pathauto][patch][1046972] = http://drupal.org/files/1046972-pathauto-array-join-path-token_1.patch
+; 1.x Last commit January 25, 2011
+projects[pathauto][type] = module
+projects[pathauto][download][type] = git
+projects[pathauto][download][url] = http://git.drupal.org/project/pathauto.git
+projects[pathauto][download][revision] = e09ab9010ff360183ff5a6119bbfc5113238aae1
 
 ; 2.x Last commit January 11, 2012
 projects[quickbar][type] = module
