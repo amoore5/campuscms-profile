@@ -552,6 +552,8 @@ function _campuscms_profile_setup_home_page() {
   $node->uid = 1;
   node_object_prepare($node);
 
+  print_r($node);
+
   $node->field_page_body[LANGUAGE_NONE][0]['value'] = 'This is your homepage. If you are logged in you can click the edit link at the top to edit what is said here.';
   $node->field_page_body[LANGUAGE_NONE][0]['format'] = 'filtered_html';
 
