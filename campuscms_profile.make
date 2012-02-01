@@ -75,11 +75,11 @@ projects[ucm_footer_blocks][download][url] = git://github.com/amoore5/ucm-footer
 projects[ucm_footer_blocks][download][branch] = master
 projects[ucm_footer_blocks][subdir] = custom/modules
 
-projects[ucm_webform_lists][type] = module
-projects[ucm_webform_lists][download][type] = git
-projects[ucm_webform_lists][download][url] = git://github.com/amoore5/ucm-predefined-options.git
-projects[ucm_webform_lists][download][branch] = master
-projects[ucm_webform_lists][subdir] = custom/modules
+projects[ucm_predefined_options][type] = module
+projects[ucm_predefined_options][download][type] = git
+projects[ucm_predefined_options][download][url] = git://github.com/amoore5/ucm-predefined-options.git
+projects[ucm_predefined_options][download][branch] = master
+projects[ucm_predefined_options][subdir] = custom/modules
 
 projects[views] = 3.1
 
