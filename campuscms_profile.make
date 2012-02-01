@@ -29,6 +29,8 @@ projects[devel] = 1.2
 projects[features][version] = 1.0-beta6
 projects[features][patch][1241108] = "http://drupal.org/files/1241108-d7-1.patch"
 
+projects[features_override] = 1.0-beta1
+
 projects[fontyourface] = 2.0
 
 projects[menu_admin_per_menu] = 1.0

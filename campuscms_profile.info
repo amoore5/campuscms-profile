@@ -27,6 +27,7 @@ dependencies[] = custom_breadcrumbs_paths
 dependencies[] = custom_breadcrumbs_views
 dependencies[] = devel
 dependencies[] = features
+dependencies[] = features_override
 dependencies[] = fontyourface
 dependencies[] = google_fonts_api
 dependencies[] = menu_admin_per_menu
