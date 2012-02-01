@@ -42,7 +42,7 @@ dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = ucm_footer_blocks
-dependencies[] = ucm_webform_lists
+dependencies[] = ucm_predefined_options
 dependencies[] = views
 
 ; Feature Dependencies

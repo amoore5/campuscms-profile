@@ -77,7 +77,7 @@ projects[ucm_footer_blocks][subdir] = custom/modules
 
 projects[ucm_webform_lists][type] = module
 projects[ucm_webform_lists][download][type] = git
-projects[ucm_webform_lists][download][url] = git://github.com/amoore5/ucm-webform-lists.git
+projects[ucm_webform_lists][download][url] = git://github.com/amoore5/ucm-predefined-options.git
 projects[ucm_webform_lists][download][branch] = master
 projects[ucm_webform_lists][subdir] = custom/modules
 
