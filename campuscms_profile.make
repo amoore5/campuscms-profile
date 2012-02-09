@@ -2,12 +2,23 @@ core = 7.x
 api = 2
 
 ; Dependencies =================================================================
+projects[campuscms_appearance_cleanup][type] = module
+projects[campuscms_appearance_cleanup][download][type] = git
+projects[campuscms_appearance_cleanup][download][url] = git://github.com/amoore5/campuscms-appearance-cleanup.git
+projects[campuscms_appearance_cleanup][download][branch] = master
+projects[campuscms_appearance_cleanup][subdir] = custom/modules
 
 projects[campuscms_node_form_columns][type] = module
 projects[campuscms_node_form_columns][download][type] = git
 projects[campuscms_node_form_columns][download][url] = git://github.com/amoore5/campuscms-node-form-columns.git
 projects[campuscms_node_form_columns][download][branch] = master
 projects[campuscms_node_form_columns][subdir] = custom/modules
+
+projects[campuscms_register_people_cleanup][type] = module
+projects[campuscms_register_people_cleanup][download][type] = git
+projects[campuscms_register_people_cleanup][download][url] = git://github.com/amoore5/campuscms-register-people-cleanup.git
+projects[campuscms_register_people_cleanup][download][branch] = master
+projects[campuscms_register_people_cleanup][subdir] = custom/modules
 
 projects[campuscms_secondary_menus][type] = module
 projects[campuscms_secondary_menus][download][type] = git
