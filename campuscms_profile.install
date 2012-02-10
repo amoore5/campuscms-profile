@@ -21,8 +21,6 @@ function campuscms_profile_install() {
 
   _campuscms_profile_setup_blocks($themes);
 
-  _campuscms_profile_setup_user_pictures();
-
   _campuscms_profile_setup_roles($filter_perms);
 
   _campuscms_profile_setup_quickbar();
@@ -304,14 +302,6 @@ function _campuscms_profile_setup_blocks($themes) {
     $query->values($record);
   }
   $query->execute();
-}
-
-function _campuscms_profile_setup_user_pictures() {
-  // Enable user picture support and set the default to a square thumbnail option.
-  variable_set('user_pictures', '1');
-  variable_set('user_picture_dimensions', '1024x1024');
-  variable_set('user_picture_file_size', '800');
-  variable_set('user_picture_style', 'thumbnail');
 }
 
 function _campuscms_profile_setup_roles($filter_perms) {
