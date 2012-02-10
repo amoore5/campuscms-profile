@@ -26,6 +26,8 @@ projects[campuscms_secondary_menus][download][url] = git://github.com/amoore5/ca
 projects[campuscms_secondary_menus][download][branch] = master
 projects[campuscms_secondary_menus][subdir] = custom/modules
 
+projects[captcha] = 1.0-beta2
+
 projects[ctools] = 1.0-rc1
 
 ; 2.x Last commit September 5, 2011
@@ -43,6 +45,8 @@ projects[features][patch][1241108] = "http://drupal.org/files/1241108-d7-1.patch
 projects[features_override] = 1.0-beta1
 
 projects[fontyourface] = 2.0
+
+projects[hidden_captcha] = 1.0
 
 projects[menu_admin_per_menu] = 1.0
 

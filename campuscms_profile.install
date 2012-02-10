@@ -534,6 +534,15 @@ function _campuscms_profile_setup_custom_breadcrumbs() {
   variable_set('custom_breadcrumbs_append_bid_class', 0);
 }
 
+function _campuscms_profile_setup_captcha() {
+  variable_set('captcha_default_challenge', 'hidden_captcha/Hidden CAPTCHA');
+
+  db_update('captcha_points')
+    ->fields(array('captcha_type' => 'default'))
+    ->condition('form_id', 'user_register_form', '=')
+    ->execute();
+}
+
 function _campuscms_profile_setup_home_page() {
   // Need to revert so I can use the field_page_body field.
   features_revert(array('campuscms_feature_page' => array('field')));
