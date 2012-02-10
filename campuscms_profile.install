@@ -27,6 +27,8 @@ function campuscms_profile_install() {
 
   _campuscms_profile_setup_custom_breadcrumbs();
 
+  _campuscms_profile_setup_captcha();
+
   _campuscms_profile_setup_home_page();
 }
 
