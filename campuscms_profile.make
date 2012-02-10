@@ -14,12 +14,6 @@ projects[campuscms_node_form_columns][download][url] = git://github.com/amoore5/
 projects[campuscms_node_form_columns][download][branch] = master
 projects[campuscms_node_form_columns][subdir] = custom/modules
 
-projects[campuscms_register_people_cleanup][type] = module
-projects[campuscms_register_people_cleanup][download][type] = git
-projects[campuscms_register_people_cleanup][download][url] = git://github.com/amoore5/campuscms-register-people-cleanup.git
-projects[campuscms_register_people_cleanup][download][branch] = master
-projects[campuscms_register_people_cleanup][subdir] = custom/modules
-
 projects[campuscms_secondary_menus][type] = module
 projects[campuscms_secondary_menus][download][type] = git
 projects[campuscms_secondary_menus][download][url] = git://github.com/amoore5/campuscms-secondary-menus.git
@@ -42,7 +36,11 @@ projects[devel] = 1.2
 projects[features][version] = 1.0-beta6
 projects[features][patch][1241108] = "http://drupal.org/files/1241108-d7-1.patch"
 
-projects[features_override] = 1.0-beta1
+; 1.x Last commit January 27, 2012
+projects[features_override][type] = module
+projects[features_override][download][type] = git
+projects[features_override][download][url] = http://git.drupal.org/project/features_override.git
+projects[features_override][download][revision] = a3236ca7a04ea7c845c83eb982b4c35115dfb931
 
 projects[fontyourface] = 2.0
 
@@ -86,22 +84,16 @@ projects[transliteration][download][type] = git
 projects[transliteration][download][url] = http://git.drupal.org/project/transliteration.git
 projects[transliteration][download][revision] = 34d41e01385a5ae5f92d96ff5ee42fc7acbfb41a
 
-projects[ucm_footer_blocks][type] = module
-projects[ucm_footer_blocks][download][type] = git
-projects[ucm_footer_blocks][download][url] = git://github.com/amoore5/ucm-footer-blocks.git
-projects[ucm_footer_blocks][download][branch] = master
-projects[ucm_footer_blocks][subdir] = custom/modules
-
-projects[ucm_predefined_options][type] = module
-projects[ucm_predefined_options][download][type] = git
-projects[ucm_predefined_options][download][url] = git://github.com/amoore5/ucm-predefined-options.git
-projects[ucm_predefined_options][download][branch] = master
-projects[ucm_predefined_options][subdir] = custom/modules
-
 projects[views] = 3.1
 
-; Features =====================================================================
+; UC Merced ====================================================================
+projects[ucm_campuscms_configuration][type] = module
+projects[ucm_campuscms_configuration][download][type] = git
+projects[ucm_campuscms_configuration][download][url] = git://github.com/amoore5/ucm-campuscms-configuration.git
+projects[ucm_campuscms_configuration][download][branch] = master
+projects[ucm_campuscms_configuration][subdir] = custom/modules
 
+; Features =====================================================================
 projects[campuscms_feature_admin_toolbar_admin][type] = module
 projects[campuscms_feature_admin_toolbar_admin][download][type] = git
 projects[campuscms_feature_admin_toolbar_admin][download][url] = git://github.com/amoore5/campuscms-feature-admin-toolbar-admin.git
@@ -120,19 +112,6 @@ projects[campuscms_feature_admin_toolbar_content_editor][download][type] = git
 projects[campuscms_feature_admin_toolbar_content_editor][download][url] = git://github.com/amoore5/campuscms-feature-admin-toolbar-content-editor.git
 projects[campuscms_feature_admin_toolbar_content_editor][download][branch] = master
 projects[campuscms_feature_admin_toolbar_content_editor][subdir] = custom/features
-
-projects[campuscms_feature_cas][type] = module
-
-projects[campuscms_feature_cas][download][type] = git
-projects[campuscms_feature_cas][download][url] = git://github.com/amoore5/campuscms-feature-cas.git
-projects[campuscms_feature_cas][download][branch] = master
-projects[campuscms_feature_cas][subdir] = custom/features
-
-projects[ucm_campuscms_cas_defaults][type] = module
-projects[ucm_campuscms_cas_defaults][download][type] = git
-projects[ucm_campuscms_cas_defaults][download][url] = git://github.com/amoore5/ucm-campuscms-cas-defaults.git
-projects[ucm_campuscms_cas_defaults][download][branch] = master
-projects[ucm_campuscms_cas_defaults][subdir] = custom/features
 
 projects[campuscms_feature_contact][type] = module
 projects[campuscms_feature_contact][download][type] = git
@@ -188,11 +167,3 @@ projects[campuscms_feature_wysiwyg][download][type] = git
 projects[campuscms_feature_wysiwyg][download][url] = git://github.com/amoore5/campuscms-feature-wysiwyg.git
 projects[campuscms_feature_wysiwyg][download][branch] = master
 projects[campuscms_feature_wysiwyg][subdir] = custom/features
-
-; Theme ========================================================================
-projects[zen] = 3.1
-projects[inception][type] = theme
-projects[inception][download][type] = git
-projects[inception][download][url] = git@bardstale.ucmerced.edu:cms-theme-inception.git
-projects[inception][download][branch] = 7.x-2.x
-projects[inception][directory_name] = inception

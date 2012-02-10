@@ -6,10 +6,8 @@
  * Perform actions to set up the site for this profile.
  */
 function campuscms_profile_install() {
-  $themes = array(
-    'theme_default' => 'inception',
-    'admin_theme' => 'seven',
-  );
+  $themes['theme_default'] = variable_get('campuscms_theme_default', 'bartik');
+  $themes['admin_theme'] = variable_get('campuscms_admin_theme', 'seven');
 
   _campuscms_profile_setup_themes($themes);
 
@@ -41,8 +39,10 @@ function _campuscms_profile_setup_themes($themes) {
     }
   }
 
-  // Disable bartik
-  theme_disable(array('bartik'));
+  // Disable bartik if it's not used
+  if ($themes['theme_default'] !== 'bartik') {
+    theme_disable(array('bartik'));
+  }
 
   // Make the admin theme the default for creating content.
   variable_set('node_admin_theme', '1');
