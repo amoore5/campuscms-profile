@@ -48,7 +48,7 @@ projects[hidden_captcha] = 1.0
 
 projects[menu_admin_per_menu] = 1.0
 
-projects[menu_block] = 2.2
+projects[menu_block] = 2.3
 
 projects[module_filter] = 1.6
 
