@@ -47,9 +47,6 @@ dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = views
 
-; UC Merced Specifics
-dependencies[] = ucm_campuscms_configuration
-
 ; Feature Dependencies
 dependencies[] = campuscms_feature_admin_toolbar_admin
 dependencies[] = campuscms_feature_admin_toolbar_site_manager
@@ -57,5 +54,9 @@ dependencies[] = campuscms_feature_admin_toolbar_content_editor
 dependencies[] = campuscms_feature_page
 dependencies[] = campuscms_feature_user_profile
 dependencies[] = campuscms_feature_wysiwyg
+
+; Patches start here
+
+; Patches end here
 
 files[] = campuscms_profile.profile

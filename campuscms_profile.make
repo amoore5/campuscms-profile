@@ -86,13 +86,6 @@ projects[transliteration][download][revision] = 34d41e01385a5ae5f92d96ff5ee42fc7
 
 projects[views] = 3.1
 
-; UC Merced ====================================================================
-projects[ucm_campuscms_configuration][type] = module
-projects[ucm_campuscms_configuration][download][type] = git
-projects[ucm_campuscms_configuration][download][url] = git://github.com/amoore5/ucm-campuscms-configuration.git
-projects[ucm_campuscms_configuration][download][branch] = master
-projects[ucm_campuscms_configuration][subdir] = custom/modules
-
 ; Features =====================================================================
 projects[campuscms_feature_admin_toolbar_admin][type] = module
 projects[campuscms_feature_admin_toolbar_admin][download][type] = git
@@ -167,3 +160,7 @@ projects[campuscms_feature_wysiwyg][download][type] = git
 projects[campuscms_feature_wysiwyg][download][url] = git://github.com/amoore5/campuscms-feature-wysiwyg.git
 projects[campuscms_feature_wysiwyg][download][branch] = master
 projects[campuscms_feature_wysiwyg][subdir] = custom/features
+
+; Patches start here
+
+; Patches end here
