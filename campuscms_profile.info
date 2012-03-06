@@ -52,7 +52,9 @@ dependencies[] = campuscms_feature_admin_toolbar_admin
 dependencies[] = campuscms_feature_admin_toolbar_site_manager
 dependencies[] = campuscms_feature_admin_toolbar_content_editor
 dependencies[] = campuscms_feature_page
+depencencies[] = campuscms_feature_search
 dependencies[] = campuscms_feature_user_profile
+dependencies[] = campuscms_feature_webform
 dependencies[] = campuscms_feature_wysiwyg
 
 ; Patches start here
