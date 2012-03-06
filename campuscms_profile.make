@@ -42,7 +42,7 @@ projects[features_override][download][type] = git
 projects[features_override][download][url] = http://git.drupal.org/project/features_override.git
 projects[features_override][download][revision] = a3236ca7a04ea7c845c83eb982b4c35115dfb931
 
-projects[fontyourface] = 2.0
+projects[fontyourface] = 2.1
 
 projects[hidden_captcha] = 1.0
 
@@ -52,11 +52,11 @@ projects[menu_block] = 2.3
 
 projects[module_filter] = 1.6
 
-; 1.x Last commit January 25, 2011
+; 1.x Last commit February 20, 2012
 projects[pathauto][type] = module
 projects[pathauto][download][type] = git
 projects[pathauto][download][url] = http://git.drupal.org/project/pathauto.git
-projects[pathauto][download][revision] = e09ab9010ff360183ff5a6119bbfc5113238aae1
+projects[pathauto][download][revision] = f6d3f4d3e19bfc011ec839da3a88c49b72eebdf8
 
 ; 2.x Last commit January 11, 2012
 projects[quickbar][type] = module
@@ -72,11 +72,11 @@ projects[role_delegation] = 1.1
 
 projects[strongarm] = 2.0-beta5
 
-; 1.x Last commit December 14, 2011
+; 1.x Last commit February 3, 2012
 projects[token][type] = module
 projects[token][download][type] = git
 projects[token][download][url] = http://git.drupal.org/project/token.git
-projects[token][download][revision] = 80c08b78c469a1ba73e9d2b8efee5825854ce127
+projects[token][download][revision] = 29c9d5640b037f6d7a8c9220f080423950ab1b87
 
 ; 3.x Last commit December 19, 2011
 projects[transliteration][type] = module
@@ -84,7 +84,7 @@ projects[transliteration][download][type] = git
 projects[transliteration][download][url] = http://git.drupal.org/project/transliteration.git
 projects[transliteration][download][revision] = 34d41e01385a5ae5f92d96ff5ee42fc7acbfb41a
 
-projects[views] = 3.1
+projects[views] = 3.3
 
 ; Features =====================================================================
 projects[campuscms_feature_admin_toolbar_admin][type] = module
