@@ -22,7 +22,7 @@ projects[campuscms_secondary_menus][subdir] = custom/modules
 
 projects[captcha] = 1.0-beta2
 
-projects[ctools] = 1.0-rc1
+projects[ctools] = 1.0
 
 ; 2.x Last commit September 5, 2011
 projects[custom_breadcrumbs][type] = module
@@ -33,7 +33,7 @@ projects[custom_breadcrumbs][patch][1414674] = http://drupal.org/files/1414674-d
 
 projects[devel] = 1.2
 
-projects[features][version] = 1.0-beta6
+projects[features][version] = 1.0-rc1
 projects[features][patch][1241108] = "http://drupal.org/files/1241108-d7-1.patch"
 
 ; 1.x Last commit January 27, 2012
@@ -70,13 +70,9 @@ projects[redirect] = 1.0-beta4
 
 projects[role_delegation] = 1.1
 
-projects[strongarm] = 2.0-beta5
+projects[strongarm] = 2.0-rc1
 
-; 1.x Last commit February 3, 2012
-projects[token][type] = module
-projects[token][download][type] = git
-projects[token][download][url] = http://git.drupal.org/project/token.git
-projects[token][download][revision] = 29c9d5640b037f6d7a8c9220f080423950ab1b87
+projects[token] = 1.0
 
 ; 3.x Last commit December 19, 2011
 projects[transliteration][type] = module
