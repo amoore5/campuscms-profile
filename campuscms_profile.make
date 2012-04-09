@@ -42,7 +42,7 @@ projects[features_override][download][type] = git
 projects[features_override][download][url] = http://git.drupal.org/project/features_override.git
 projects[features_override][download][revision] = a3236ca7a04ea7c845c83eb982b4c35115dfb931
 
-projects[fontyourface] = 2.1
+projects[fontyourface] = 2.2
 
 projects[hidden_captcha] = 1.0
 
