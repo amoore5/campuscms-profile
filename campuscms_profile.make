@@ -2,6 +2,8 @@ core = 7.x
 api = 2
 
 ; Dependencies =================================================================
+projects[auto_nodetitle] = 1.0
+
 projects[campuscms_appearance_cleanup][type] = module
 projects[campuscms_appearance_cleanup][download][type] = git
 projects[campuscms_appearance_cleanup][download][url] = git://github.com/amoore5/campuscms-appearance-cleanup.git
