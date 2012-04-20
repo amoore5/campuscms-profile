@@ -35,7 +35,7 @@ projects[custom_breadcrumbs][patch][1414674] = http://drupal.org/files/1414674-d
 
 projects[devel] = 1.2
 
-projects[features][version] = 1.0-rc1
+projects[features][version] = 1.0-rc2
 projects[features][patch][1241108] = "http://drupal.org/files/1241108-d7-1.patch"
 
 ; 1.x Last commit January 27, 2012
@@ -43,6 +43,12 @@ projects[features_override][type] = module
 projects[features_override][download][type] = git
 projects[features_override][download][url] = http://git.drupal.org/project/features_override.git
 projects[features_override][download][revision] = a3236ca7a04ea7c845c83eb982b4c35115dfb931
+
+; 2.x Last commit April 19, 2012
+projects[feeds][type] = module
+projects[feeds][download][type] = git
+projects[feeds][download][url] = http://git.drupal.org/project/feeds.git
+projects[feeds][download][revision] = 5fbf8ae1dc3915fe2b49be490e418f3794138265
 
 projects[fontyourface] = 2.2
 
