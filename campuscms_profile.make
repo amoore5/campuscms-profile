@@ -44,11 +44,11 @@ projects[features_override][download][type] = git
 projects[features_override][download][url] = http://git.drupal.org/project/features_override.git
 projects[features_override][download][revision] = a3236ca7a04ea7c845c83eb982b4c35115dfb931
 
-; 2.x Last commit April 19, 2012
+; 2.x Last commit April 26, 2012
 projects[feeds][type] = module
 projects[feeds][download][type] = git
 projects[feeds][download][url] = http://git.drupal.org/project/feeds.git
-projects[feeds][download][revision] = 5fbf8ae1dc3915fe2b49be490e418f3794138265
+projects[feeds][download][revision] = e98ef6b49c7a2ffb2a23011215a6f76c8efb055f
 
 projects[fontyourface] = 2.2
 
