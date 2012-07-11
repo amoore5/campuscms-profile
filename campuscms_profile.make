@@ -33,9 +33,9 @@ projects[custom_breadcrumbs][download][url] = http://git.drupal.org/project/cust
 projects[custom_breadcrumbs][download][revision] = 0b50c14b01cf4157ea13313367e1f82ee435b08b
 projects[custom_breadcrumbs][patch][1414674] = http://drupal.org/files/1414674-d7-1.patch
 
-projects[devel] = 1.2
+projects[devel] = 1.3
 
-projects[features][version] = 1.0-rc2
+projects[features][version] = 1.0-rc3
 projects[features][patch][1241108] = "http://drupal.org/files/1241108-d7-1.patch"
 
 ; 1.x Last commit January 27, 2012
@@ -44,13 +44,9 @@ projects[features_override][download][type] = git
 projects[features_override][download][url] = http://git.drupal.org/project/features_override.git
 projects[features_override][download][revision] = a3236ca7a04ea7c845c83eb982b4c35115dfb931
 
-; 2.x Last commit April 26, 2012
-projects[feeds][type] = module
-projects[feeds][download][type] = git
-projects[feeds][download][url] = http://git.drupal.org/project/feeds.git
-projects[feeds][download][revision] = e98ef6b49c7a2ffb2a23011215a6f76c8efb055f
+projects[feeds] = 2.0-alpha5
 
-projects[fontyourface] = 2.2
+projects[fontyourface] = 2.3
 
 projects[hidden_captcha] = 1.0
 
@@ -58,13 +54,9 @@ projects[menu_admin_per_menu] = 1.0
 
 projects[menu_block] = 2.3
 
-projects[module_filter] = 1.6
+projects[module_filter] = 1.7
 
-; 1.x Last commit February 20, 2012
-projects[pathauto][type] = module
-projects[pathauto][download][type] = git
-projects[pathauto][download][url] = http://git.drupal.org/project/pathauto.git
-projects[pathauto][download][revision] = f6d3f4d3e19bfc011ec839da3a88c49b72eebdf8
+projects[pathauto][type] = 1.1
 
 ; 2.x Last commit January 11, 2012
 projects[quickbar][type] = module
@@ -72,7 +64,7 @@ projects[quickbar][download][type] = git
 projects[quickbar][download][url] = http://git.drupal.org/project/quickbar.git
 projects[quickbar][download][revision] = 2841ef19db41f55cda3be54e199e0f1af10259d8
 
-projects[realname] = 1.0-rc2
+projects[realname] = 1.0
 
 projects[redirect] = 1.0-beta4
 
@@ -80,13 +72,9 @@ projects[role_delegation] = 1.1
 
 projects[strongarm] = 2.0-rc1
 
-projects[token] = 1.0
+projects[token] = 1.1
 
-; 3.x Last commit December 19, 2011
-projects[transliteration][type] = module
-projects[transliteration][download][type] = git
-projects[transliteration][download][url] = http://git.drupal.org/project/transliteration.git
-projects[transliteration][download][revision] = 34d41e01385a5ae5f92d96ff5ee42fc7acbfb41a
+projects[transliteration] = 3.1
 
 projects[views] = 3.3
 
