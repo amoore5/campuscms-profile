@@ -56,7 +56,7 @@ projects[menu_block] = 2.3
 
 projects[module_filter] = 1.7
 
-projects[pathauto][type] = 1.1
+projects[pathauto] = 1.1
 
 ; 2.x Last commit January 11, 2012
 projects[quickbar][type] = module
