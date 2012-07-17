@@ -32,6 +32,7 @@ projects[custom_breadcrumbs][download][type] = git
 projects[custom_breadcrumbs][download][url] = http://git.drupal.org/project/custom_breadcrumbs.git
 projects[custom_breadcrumbs][download][revision] = 0b50c14b01cf4157ea13313367e1f82ee435b08b
 projects[custom_breadcrumbs][patch][1414674] = http://drupal.org/files/1414674-d7-1.patch
+projects[custom_breadcrumbs][patch][992394] = http://drupal.org/files/Issue_992394_by_Ryotsuke_zhangtaihao-menu-parent-trail_has_wrong_order-8.patch
 
 projects[devel] = 1.3
 
