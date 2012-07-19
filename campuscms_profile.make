@@ -31,8 +31,7 @@ projects[custom_breadcrumbs][type] = module
 projects[custom_breadcrumbs][download][type] = git
 projects[custom_breadcrumbs][download][url] = http://git.drupal.org/project/custom_breadcrumbs.git
 projects[custom_breadcrumbs][download][revision] = 0b50c14b01cf4157ea13313367e1f82ee435b08b
-projects[custom_breadcrumbs][patch][1414674] = http://drupal.org/files/1414674-d7-1.patch
-projects[custom_breadcrumbs][patch][992394] = http://drupal.org/files/992394-d7-1.patch
+projects[custom_breadcrumbs][patch][992394_1414674] = https://raw.github.com/gist/3140942/0a586e218b17646084845824c31500b89bcdae5b/custom_breadcrumbs_combo.patch
 
 projects[devel] = 1.3
 
