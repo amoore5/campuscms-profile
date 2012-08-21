@@ -24,7 +24,7 @@ projects[campuscms_secondary_menus][subdir] = custom/modules
 
 projects[captcha] = 1.0-beta2
 
-projects[ctools] = 1.0
+projects[ctools] = 1.2
 
 ; 2.x Last commit September 5, 2011
 projects[custom_breadcrumbs][type] = module
@@ -35,7 +35,7 @@ projects[custom_breadcrumbs][patch][992394_1414674] = https://raw.github.com/gis
 
 projects[devel] = 1.3
 
-projects[features][version] = 1.0-rc3
+projects[features][version] = 1.0
 projects[features][patch][1241108] = "http://drupal.org/files/1241108-d7-1.patch"
 
 ; 1.x Last commit January 27, 2012
@@ -46,7 +46,7 @@ projects[features_override][download][revision] = a3236ca7a04ea7c845c83eb982b4c3
 
 projects[feeds] = 2.0-alpha5
 
-projects[fontyourface] = 2.3
+projects[fontyourface] = 2.4
 
 projects[hidden_captcha] = 1.0
 
@@ -56,7 +56,7 @@ projects[menu_block] = 2.3
 
 projects[module_filter] = 1.7
 
-projects[pathauto] = 1.1
+projects[pathauto] = 1.2
 
 ; 2.x Last commit January 11, 2012
 projects[quickbar][type] = module
@@ -70,9 +70,9 @@ projects[redirect] = 1.0-beta4
 
 projects[role_delegation] = 1.1
 
-projects[strongarm] = 2.0-rc1
+projects[strongarm] = 2.0
 
-projects[token] = 1.1
+projects[token] = 1.2
 
 projects[transliteration] = 3.1
 
