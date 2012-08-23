@@ -116,6 +116,12 @@ projects[campuscms_feature_events][download][url] = git://github.com/amoore5/cam
 projects[campuscms_feature_events][download][branch] = master
 projects[campuscms_feature_events][subdir] = custom/features
 
+projects[campuscms_feature_faculty][type] = module
+projects[campuscms_feature_faculty][download][type] = git
+projects[campuscms_feature_faculty][download][url] = git://github.com/amoore5/campuscms-feature-faculty.git
+projects[campuscms_feature_faculty][download][branch] = master
+projects[campuscms_feature_faculty][subdir] = custom/features
+
 projects[campuscms_feature_news][type] = module
 projects[campuscms_feature_news][download][type] = git
 projects[campuscms_feature_news][download][url] = git://github.com/amoore5/campuscms-feature-news.git
@@ -133,6 +139,12 @@ projects[campuscms_feature_search][download][type] = git
 projects[campuscms_feature_search][download][url] = git://github.com/amoore5/campuscms-feature-search.git
 projects[campuscms_feature_search][download][branch] = master
 projects[campuscms_feature_search][subdir] = custom/features
+
+projects[campuscms_feature_slideshow][type] = module
+projects[campuscms_feature_slideshow][download][type] = git
+projects[campuscms_feature_slideshow][download][url] = git://github.com/amoore5/campuscms-feature-slideshow.git
+projects[campuscms_feature_slideshow][download][branch] = master
+projects[campuscms_feature_slideshow][subdir] = custom/features
 
 projects[campuscms_feature_user_profile][type] = module
 projects[campuscms_feature_user_profile][version] = 1.0
