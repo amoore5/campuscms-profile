@@ -76,7 +76,7 @@ projects[token] = 1.2
 
 projects[transliteration] = 3.1
 
-projects[views] = 3.3
+projects[views] = 3.4
 
 ; Features =====================================================================
 projects[campuscms_feature_admin_toolbar_admin][type] = module
