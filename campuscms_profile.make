@@ -46,7 +46,7 @@ projects[features_override][download][revision] = a3236ca7a04ea7c845c83eb982b4c3
 
 projects[feeds] = 2.0-alpha5
 
-projects[fontyourface] = 2.4
+projects[fontyourface] = 2.5
 
 projects[hidden_captcha] = 1.0
 
@@ -66,17 +66,17 @@ projects[quickbar][download][revision] = 2841ef19db41f55cda3be54e199e0f1af10259d
 
 projects[realname] = 1.0
 
-projects[redirect] = 1.0-beta4
+projects[redirect] = 1.0-rc1
 
 projects[role_delegation] = 1.1
 
 projects[strongarm] = 2.0
 
-projects[token] = 1.2
+projects[token] = 1.4
 
 projects[transliteration] = 3.1
 
-projects[views] = 3.4
+projects[views] = 3.5
 
 ; Features =====================================================================
 projects[campuscms_feature_admin_toolbar_admin][type] = module
