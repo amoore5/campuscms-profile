@@ -146,6 +146,12 @@ projects[campuscms_feature_slideshow][download][url] = git://github.com/amoore5/
 projects[campuscms_feature_slideshow][download][branch] = master
 projects[campuscms_feature_slideshow][subdir] = custom/features
 
+projects[campuscms_feature_superfish][type] = module
+projects[campuscms_feature_superfish][download][type] = git
+projects[campuscms_feature_superfish][download][url] = git://github.com/amoore5/campuscms-feature-superfish.git
+projects[campuscms_feature_superfish][download][branch] = master
+projects[campuscms_feature_superfish][subdir] = custom/features
+
 projects[campuscms_feature_user_profile][type] = module
 projects[campuscms_feature_user_profile][version] = 1.0
 projects[campuscms_feature_user_profile][download][type] = git
