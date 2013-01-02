@@ -46,7 +46,7 @@ projects[features_override][download][revision] = a3236ca7a04ea7c845c83eb982b4c3
 
 projects[feeds] = 2.0-alpha5
 
-projects[fontyourface] = 2.5
+projects[fontyourface] = 2.6
 
 projects[hidden_captcha] = 1.0
 
